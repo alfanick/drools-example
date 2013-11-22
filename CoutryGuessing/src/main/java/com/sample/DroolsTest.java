@@ -12,8 +12,6 @@ import org.drools.logger.KnowledgeRuntimeLogger;
 import org.drools.logger.KnowledgeRuntimeLoggerFactory;
 import org.drools.runtime.StatefulKnowledgeSession;
 
-import pl.put.poznan.Pytanie;
-
 /**
  * This is a sample class to launch a rule.
  */

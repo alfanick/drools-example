@@ -6,7 +6,7 @@ import com.sample.DroolsTest.*
 
 
 //declare any global variables here
-
+import pl.put.poznan.*;
 
 
 
@@ -22,25 +22,25 @@ end
 rule "Rosja"
     //include attributes such as "salience" here...
     when
-       Odpowiedz(pytanie == "id_3", tekst == "tak")
+       Odpowiedz(pytanie == "id_3", prawda)
     then
        Odpowiedz.oglos("Rosja");
 
 end
 
-rule "W¸ochy"
+rule "Wlochy"
     //include attributes such as "salience" here...
     when
-       Odpowiedz(pytanie == "id_4", tekst == "tak")
+       Odpowiedz(pytanie == "id_4", prawda)
     then
-       Odpowiedz.oglos("W¸ochy");
+       Odpowiedz.oglos("Wlochy");
 
 end
 
 rule "Afryka"
     //include attributes such as "salience" here...
     when
-       Odpowiedz(pytanie == "id_4", tekst == "nie")
+       Odpowiedz(pytanie == "id_4", !prawda)
     then
        Odpowiedz.oglos("Pewnie afryka ;)");
 
