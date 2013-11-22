@@ -12,12 +12,16 @@ import org.drools.logger.KnowledgeRuntimeLogger;
 import org.drools.logger.KnowledgeRuntimeLoggerFactory;
 import org.drools.runtime.StatefulKnowledgeSession;
 
+import pl.put.poznan.Pytanie;
+
 /**
  * This is a sample class to launch a rule.
  */
 public class DroolsTest {
 
     public static final void main(String[] args) {
+      Pytanie.zadaj("dpytania");
+      
         try {
             // load up the knowledge base
             KnowledgeBase kbase = readKnowledgeBase();
