@@ -7,7 +7,7 @@ import com.sample.DroolsTest.*
 
 //declare any global variables here
 
-
+import pl.put.poznan.*;
 
 
 rule "pyt1"
@@ -22,7 +22,7 @@ end
 rule "pyt2"
   
     when
-        Odpowiedz(pytanie == "id_1", tekst == "tak")
+        Odpowiedz(pytanie == "id_1", prawda)
     then
         insert(Pytanie.zadaj("id_2"));
 
@@ -30,14 +30,14 @@ end
 
 rule "pyt3"
 	when
-		Odpowiedz(pytanie == "id_2", tekst == "Ba∏tyckie")
+		Odpowiedz(pytanie == "id_2", tekst == "Ba≈Çtyckie")
 	then
 		insert(Pytanie.zadaj("id3"));
 end
 		
 rule "pyt4"
 	when
-		Odpowiedz(pytanie == "id_2", tekst == "Âródziemne")
+		Odpowiedz(pytanie == "id_2", tekst == "≈ör√≥dziemne")
 	then
 		insert(Pytanie.zadaj("id4"));
 end	

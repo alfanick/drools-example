@@ -1,5 +1,9 @@
 package pl.put.poznan;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -79,15 +83,22 @@ public class Pytanie {
     if (Pytanie.zawartosc.isEmpty()) {
       // wczytaj
       Yaml yaml = new Yaml();
-      Map<String, Map<String, Object>> map = (Map<String, Map<String, Object>>)yaml.load("dpytania:\n  pytanie: Jaki lubisz dzem?\n  odpowiedzi:\n    - 2.12\n    - bananowy\n    - jagodowy\n    - cytrynowy\nkolejne_id:\n  pytanie: Tresc\n  odpowiedzi:\n     - a\n     - b\n     - c");
-      
-      for (Map.Entry<String, Map<String, Object>> entry : map.entrySet()) {
-        Pytanie pytanie = new Pytanie();
-        pytanie.setId(entry.getKey());
-        pytanie.setTresc((String)(entry.getValue().get("pytanie")));
-        pytanie.setOdpowiedzi((ArrayList<String>)(entry.getValue().get("odpowiedzi")));
+      Map<String, Map<String, Object>> map;
+      try {
+        map = (Map<String, Map<String, Object>>)yaml.load((InputStream)(new FileInputStream(new File("rsc/pytania.yaml"))));
+
         
-        Pytanie.zawartosc.put(entry.getKey(), pytanie);
+        for (Map.Entry<String, Map<String, Object>> entry : map.entrySet()) {
+          Pytanie pytanie = new Pytanie();
+          pytanie.setId(entry.getKey());
+          pytanie.setTresc((String)(entry.getValue().get("pytanie")));
+          pytanie.setOdpowiedzi((ArrayList<String>)(entry.getValue().get("odpowiedzi")));
+          
+          Pytanie.zawartosc.put(entry.getKey(), pytanie);
+        }
+      } catch (FileNotFoundException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
       }
     }
     

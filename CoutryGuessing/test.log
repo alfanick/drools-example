@@ -1,68 +1,66 @@
 <object-stream>
 <org.drools.audit.event.ActivationLogEvent>
   <type>4</type>
-  <activationId>Hello World [1]</activationId>
-  <rule>Hello World</rule>
-<<<<<<< HEAD
-  <declarations>myMessage=Hello World(1); m=com.sample.DroolsTest$Message@14b9b618(1)</declarations>
-=======
-  <declarations>myMessage=Hello World(1); m=com.sample.DroolsTest$Message@51d1d995(1)</declarations>
->>>>>>> backend
+  <activationId>pyt1 [0]</activationId>
+  <rule>pyt1</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>pyt1 [0]</activationId>
+  <rule>pyt1</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>pyt2 [1]</activationId>
+  <rule>pyt2</rule>
+  <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>1</factId>
-<<<<<<< HEAD
-  <objectToString>com.sample.DroolsTest$Message@14b9b618</objectToString>
-=======
-  <objectToString>com.sample.DroolsTest$Message@51d1d995</objectToString>
->>>>>>> backend
+  <objectToString>pl.put.poznan.Odpowiedz@7025588a</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>pyt1 [0]</activationId>
+  <rule>pyt1</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
-  <activationId>Hello World [1]</activationId>
-  <rule>Hello World</rule>
-<<<<<<< HEAD
-  <declarations>myMessage=Hello World(1); m=com.sample.DroolsTest$Message@14b9b618(1)</declarations>
-=======
-  <declarations>myMessage=Hello World(1); m=com.sample.DroolsTest$Message@51d1d995(1)</declarations>
->>>>>>> backend
+  <activationId>pyt2 [1]</activationId>
+  <rule>pyt2</rule>
+  <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>4</type>
-  <activationId>GoodBye [1]</activationId>
-  <rule>GoodBye</rule>
-  <declarations>myMessage=Goodbye cruel world(1)</declarations>
+  <activationId>Norwegia [2]</activationId>
+  <rule>Norwegia</rule>
+  <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
-  <type>2</type>
-  <factId>1</factId>
-<<<<<<< HEAD
-  <objectToString>com.sample.DroolsTest$Message@14b9b618</objectToString>
-=======
-  <objectToString>com.sample.DroolsTest$Message@51d1d995</objectToString>
->>>>>>> backend
+  <type>1</type>
+  <factId>2</factId>
+  <objectToString>pl.put.poznan.Odpowiedz@313d6965</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
-  <activationId>Hello World [1]</activationId>
-  <rule>Hello World</rule>
-<<<<<<< HEAD
-  <declarations>myMessage=Goodbye cruel world(1); m=com.sample.DroolsTest$Message@14b9b618(1)</declarations>
-=======
-  <declarations>myMessage=Goodbye cruel world(1); m=com.sample.DroolsTest$Message@51d1d995(1)</declarations>
->>>>>>> backend
+  <activationId>pyt2 [1]</activationId>
+  <rule>pyt2</rule>
+  <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
-  <activationId>GoodBye [1]</activationId>
-  <rule>GoodBye</rule>
-  <declarations>myMessage=Goodbye cruel world(1)</declarations>
+  <activationId>Norwegia [2]</activationId>
+  <rule>Norwegia</rule>
+  <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
-  <activationId>GoodBye [1]</activationId>
-  <rule>GoodBye</rule>
-  <declarations>myMessage=Goodbye cruel world(1)</declarations>
+  <activationId>Norwegia [2]</activationId>
+  <rule>Norwegia</rule>
+  <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 </object-stream>
