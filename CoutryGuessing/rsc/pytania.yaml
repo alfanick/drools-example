@@ -6,9 +6,9 @@ id_1:
 id_2:
   pytanie: "Do którego morza/oceanu ma ono dostęp (gdy ma dostęp do kilku wybierz tylko jedno)?"
   odpowiedzi:
-    - "Bałtyckie"
-    - "Śródziemne"
-    - "Północne"
+    - "Baltyckie"
+    - "Srodziemne"
+    - "Polnocne"
     - "Czarne"
     - "Norweskie"
     - "Atlantyk"

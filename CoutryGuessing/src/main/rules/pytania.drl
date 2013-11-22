@@ -30,16 +30,16 @@ end
 
 rule "pyt3"
 	when
-		Odpowiedz(pytanie == "id_2", tekst == "Bałtyckie")
+		Odpowiedz(pytanie == "id_2", tekst == "Baltyckie")
 	then
-		insert(Pytanie.zadaj("id3"));
+		insert(Pytanie.zadaj("id_3"));
 end
 		
 rule "pyt4"
 	when
-		Odpowiedz(pytanie == "id_2", tekst == "Śródziemne")
+		Odpowiedz(pytanie == "id_2", tekst == "Srodziemne")
 	then
-		insert(Pytanie.zadaj("id4"));
+		insert(Pytanie.zadaj("id_4"));
 end	
 		
 		

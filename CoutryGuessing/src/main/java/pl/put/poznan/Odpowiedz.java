@@ -11,7 +11,7 @@ public class Odpowiedz {
   public Odpowiedz(String p, String t) {
     pytanie = p;
     tekst = t;
-    System.out.println("tworze stringa");
+    System.out.println("tworze stringa " + t);
   }
   
   public Odpowiedz(String p, float l) {
