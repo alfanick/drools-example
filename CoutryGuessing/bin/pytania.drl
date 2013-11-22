@@ -1,0 +1,51 @@
+//created on: 2013-11-22
+package rules
+
+//list any import classes here.
+import com.sample.DroolsTest.*
+
+
+//declare any global variables here
+
+import pl.put.poznan.*;
+
+
+rule "pyt1"
+
+    when
+       
+    then
+        insert(Pytanie.zadaj("id_1"));
+
+end
+
+rule "pyt2"
+  
+    when
+        Odpowiedz(pytanie == "id_1", prawda)
+    then
+        insert(Pytanie.zadaj("id_2"));
+
+end
+
+rule "pyt3"
+	when
+		Odpowiedz(pytanie == "id_2", tekst == "Baltyckie")
+	then
+		insert(Pytanie.zadaj("id_3"));
+end
+		
+rule "pyt4"
+	when
+		Odpowiedz(pytanie == "id_2", tekst == "Srodziemne")
+	then
+		insert(Pytanie.zadaj("id_4"));
+end	
+		
+		
+		
+		
+		
+		
+		
+		
