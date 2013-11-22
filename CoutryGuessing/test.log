@@ -3,18 +3,18 @@
   <type>4</type>
   <activationId>Hello World [1]</activationId>
   <rule>Hello World</rule>
-  <declarations>myMessage=Hello World(1); m=com.sample.DroolsTest$Message@7f1e1bbf(1)</declarations>
+  <declarations>myMessage=Hello World(1); m=com.sample.DroolsTest$Message@14b9b618(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>1</factId>
-  <objectToString>com.sample.DroolsTest$Message@7f1e1bbf</objectToString>
+  <objectToString>com.sample.DroolsTest$Message@14b9b618</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
   <activationId>Hello World [1]</activationId>
   <rule>Hello World</rule>
-  <declarations>myMessage=Hello World(1); m=com.sample.DroolsTest$Message@7f1e1bbf(1)</declarations>
+  <declarations>myMessage=Hello World(1); m=com.sample.DroolsTest$Message@14b9b618(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>4</type>
@@ -25,13 +25,13 @@
 <org.drools.audit.event.ObjectLogEvent>
   <type>2</type>
   <factId>1</factId>
-  <objectToString>com.sample.DroolsTest$Message@7f1e1bbf</objectToString>
+  <objectToString>com.sample.DroolsTest$Message@14b9b618</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
   <activationId>Hello World [1]</activationId>
   <rule>Hello World</rule>
-  <declarations>myMessage=Goodbye cruel world(1); m=com.sample.DroolsTest$Message@7f1e1bbf(1)</declarations>
+  <declarations>myMessage=Goodbye cruel world(1); m=com.sample.DroolsTest$Message@14b9b618(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
