@@ -1,0 +1,47 @@
+//created on: 2013-11-22
+package rules
+
+//list any import classes here.
+import com.sample.DroolsTest.*
+
+
+//declare any global variables here
+
+
+
+
+rule "Norwegia"
+
+    when
+        Odpowiedz(pytanie == "id_2", tekst == "Norweskie")
+    then
+        Odpowiedz.oglos("Norwegia");
+
+end
+
+rule "Rosja"
+    //include attributes such as "salience" here...
+    when
+       Odpowiedz(pytanie == "id_3", tekst == "tak")
+    then
+       Odpowiedz.oglos("Rosja");
+
+end
+
+rule "W¸ochy"
+    //include attributes such as "salience" here...
+    when
+       Odpowiedz(pytanie == "id_4", tekst == "tak")
+    then
+       Odpowiedz.oglos("W¸ochy");
+
+end
+
+rule "Afryka"
+    //include attributes such as "salience" here...
+    when
+       Odpowiedz(pytanie == "id_4", tekst == "nie")
+    then
+       Odpowiedz.oglos("Pewnie afryka ;)");
+
+end

@@ -1,0 +1,21 @@
+id_1:
+	pytanie: "Czy to państwo ma dostęp do morza?"
+	odpowiedzi:
+		- "Tak"
+		- "Nie"
+id_2:
+	pytanie: "Do którego morza/oceanu ma ono dostęp (gdy ma dostęp do kilku wybierz tylko jedno)?"
+		- "Bałtyckie"
+		- "Śródziemne"
+		- "Północne"
+		- "Czarne"
+		- "Norweskie"
+		- "Atlantyk"
+id_3:
+	pytanie: "Czy to państwo leży na dwóch kontynentach?"
+		- "Tak"
+		- "Nie"
+id_4:
+	pytanie: "Czy jest to kraina pizzy i makaronu?
+		- "Tak"
+		- "Nie"
