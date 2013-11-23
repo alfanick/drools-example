@@ -6,84 +6,848 @@
   <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
-  <type>6</type>
-  <activationId>pyt1 [0]</activationId>
-  <rule>pyt1</rule>
+  <type>4</type>
+  <activationId>Albania [0]</activationId>
+  <rule>Albania</rule>
   <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>4</type>
-  <activationId>pyt2 [1]</activationId>
-  <rule>pyt2</rule>
+  <activationId>Andora [0]</activationId>
+  <rule>Andora</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Austria [0]</activationId>
+  <rule>Austria</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Belgia [0]</activationId>
+  <rule>Belgia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Bialorus [0]</activationId>
+  <rule>Bialorus</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Bosnia i Hercegowina [0]</activationId>
+  <rule>Bosnia i Hercegowina</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Bulgaria [0]</activationId>
+  <rule>Bulgaria</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Chorwacja [0]</activationId>
+  <rule>Chorwacja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Czarnogora [0]</activationId>
+  <rule>Czarnogora</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Czechy [0]</activationId>
+  <rule>Czechy</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Dania [0]</activationId>
+  <rule>Dania</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Estonia [0]</activationId>
+  <rule>Estonia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Finlandia [0]</activationId>
+  <rule>Finlandia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Francja [0]</activationId>
+  <rule>Francja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Grecja [0]</activationId>
+  <rule>Grecja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Hiszpania [0]</activationId>
+  <rule>Hiszpania</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Holandia [0]</activationId>
+  <rule>Holandia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Irlandia [0]</activationId>
+  <rule>Irlandia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Islandia [0]</activationId>
+  <rule>Islandia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Kazachstan [0]</activationId>
+  <rule>Kazachstan</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Liechtenstein [0]</activationId>
+  <rule>Liechtenstein</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Litwa [0]</activationId>
+  <rule>Litwa</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Luksemburg [0]</activationId>
+  <rule>Luksemburg</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Lotwa [0]</activationId>
+  <rule>Lotwa</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Macedonia [0]</activationId>
+  <rule>Macedonia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Malta [0]</activationId>
+  <rule>Malta</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Moldawia [0]</activationId>
+  <rule>Moldawia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Monako [0]</activationId>
+  <rule>Monako</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Niemcy [0]</activationId>
+  <rule>Niemcy</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Norwegia [0]</activationId>
+  <rule>Norwegia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Polska [0]</activationId>
+  <rule>Polska</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Portugalia [0]</activationId>
+  <rule>Portugalia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rosja [0]</activationId>
+  <rule>Rosja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rumunia [0]</activationId>
+  <rule>Rumunia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>San Marino [0]</activationId>
+  <rule>San Marino</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Serbia [0]</activationId>
+  <rule>Serbia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Slowacja [0]</activationId>
+  <rule>Slowacja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Slowenia [0]</activationId>
+  <rule>Slowenia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Szwajcaria [0]</activationId>
+  <rule>Szwajcaria</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Szwecja [0]</activationId>
+  <rule>Szwecja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Turcja [0]</activationId>
+  <rule>Turcja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Ukraina [0]</activationId>
+  <rule>Ukraina</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Watykan [0]</activationId>
+  <rule>Watykan</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wegry [0]</activationId>
+  <rule>Wegry</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wielka Brytania [0]</activationId>
+  <rule>Wielka Brytania</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wlochy [0]</activationId>
+  <rule>Wlochy</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Wlochy [0]</activationId>
+  <rule>Wlochy</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Wlochy [0]</activationId>
+  <rule>Wlochy</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Wielka Brytania [0]</activationId>
+  <rule>Wielka Brytania</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Wielka Brytania [0]</activationId>
+  <rule>Wielka Brytania</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Wegry [0]</activationId>
+  <rule>Wegry</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Wegry [0]</activationId>
+  <rule>Wegry</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Watykan [0]</activationId>
+  <rule>Watykan</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Watykan [0]</activationId>
+  <rule>Watykan</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Ukraina [0]</activationId>
+  <rule>Ukraina</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Ukraina [0]</activationId>
+  <rule>Ukraina</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Turcja [0]</activationId>
+  <rule>Turcja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Turcja [0]</activationId>
+  <rule>Turcja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Szwecja [0]</activationId>
+  <rule>Szwecja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Szwecja [0]</activationId>
+  <rule>Szwecja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Szwajcaria [0]</activationId>
+  <rule>Szwajcaria</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Szwajcaria [0]</activationId>
+  <rule>Szwajcaria</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Slowenia [0]</activationId>
+  <rule>Slowenia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Slowenia [0]</activationId>
+  <rule>Slowenia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Slowacja [0]</activationId>
+  <rule>Slowacja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Slowacja [0]</activationId>
+  <rule>Slowacja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Serbia [0]</activationId>
+  <rule>Serbia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Serbia [0]</activationId>
+  <rule>Serbia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>San Marino [0]</activationId>
+  <rule>San Marino</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>San Marino [0]</activationId>
+  <rule>San Marino</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Rumunia [0]</activationId>
+  <rule>Rumunia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Rumunia [0]</activationId>
+  <rule>Rumunia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Rosja [0]</activationId>
+  <rule>Rosja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Rosja [0]</activationId>
+  <rule>Rosja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Portugalia [0]</activationId>
+  <rule>Portugalia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Portugalia [0]</activationId>
+  <rule>Portugalia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Polska [0]</activationId>
+  <rule>Polska</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Polska [0]</activationId>
+  <rule>Polska</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Norwegia [0]</activationId>
+  <rule>Norwegia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Norwegia [0]</activationId>
+  <rule>Norwegia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Niemcy [0]</activationId>
+  <rule>Niemcy</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Niemcy [0]</activationId>
+  <rule>Niemcy</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Monako [0]</activationId>
+  <rule>Monako</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Monako [0]</activationId>
+  <rule>Monako</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Moldawia [0]</activationId>
+  <rule>Moldawia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Moldawia [0]</activationId>
+  <rule>Moldawia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Malta [0]</activationId>
+  <rule>Malta</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Malta [0]</activationId>
+  <rule>Malta</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Macedonia [0]</activationId>
+  <rule>Macedonia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Macedonia [0]</activationId>
+  <rule>Macedonia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Lotwa [0]</activationId>
+  <rule>Lotwa</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Lotwa [0]</activationId>
+  <rule>Lotwa</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Luksemburg [0]</activationId>
+  <rule>Luksemburg</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Luksemburg [0]</activationId>
+  <rule>Luksemburg</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Litwa [0]</activationId>
+  <rule>Litwa</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Litwa [0]</activationId>
+  <rule>Litwa</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Liechtenstein [0]</activationId>
+  <rule>Liechtenstein</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Liechtenstein [0]</activationId>
+  <rule>Liechtenstein</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Kazachstan [0]</activationId>
+  <rule>Kazachstan</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Kazachstan [0]</activationId>
+  <rule>Kazachstan</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Islandia [0]</activationId>
+  <rule>Islandia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Islandia [0]</activationId>
+  <rule>Islandia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Irlandia [0]</activationId>
+  <rule>Irlandia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Irlandia [0]</activationId>
+  <rule>Irlandia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Holandia [0]</activationId>
+  <rule>Holandia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Holandia [0]</activationId>
+  <rule>Holandia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Hiszpania [0]</activationId>
+  <rule>Hiszpania</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Hiszpania [0]</activationId>
+  <rule>Hiszpania</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Grecja [0]</activationId>
+  <rule>Grecja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Grecja [0]</activationId>
+  <rule>Grecja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Francja [0]</activationId>
+  <rule>Francja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Francja [0]</activationId>
+  <rule>Francja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Finlandia [0]</activationId>
+  <rule>Finlandia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Finlandia [0]</activationId>
+  <rule>Finlandia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Estonia [0]</activationId>
+  <rule>Estonia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Estonia [0]</activationId>
+  <rule>Estonia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Dania [0]</activationId>
+  <rule>Dania</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Dania [0]</activationId>
+  <rule>Dania</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Czechy [0]</activationId>
+  <rule>Czechy</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Czechy [0]</activationId>
+  <rule>Czechy</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Czarnogora [0]</activationId>
+  <rule>Czarnogora</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Czarnogora [0]</activationId>
+  <rule>Czarnogora</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Chorwacja [0]</activationId>
+  <rule>Chorwacja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Chorwacja [0]</activationId>
+  <rule>Chorwacja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Bulgaria [0]</activationId>
+  <rule>Bulgaria</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Bulgaria [0]</activationId>
+  <rule>Bulgaria</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Bosnia i Hercegowina [0]</activationId>
+  <rule>Bosnia i Hercegowina</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Bosnia i Hercegowina [0]</activationId>
+  <rule>Bosnia i Hercegowina</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Bialorus [0]</activationId>
+  <rule>Bialorus</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Bialorus [0]</activationId>
+  <rule>Bialorus</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Belgia [0]</activationId>
+  <rule>Belgia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Belgia [0]</activationId>
+  <rule>Belgia</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Austria [0]</activationId>
+  <rule>Austria</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Austria [0]</activationId>
+  <rule>Austria</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Andora [0]</activationId>
+  <rule>Andora</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Andora [0]</activationId>
+  <rule>Andora</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Albania [0]</activationId>
+  <rule>Albania</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Albania [0]</activationId>
+  <rule>Albania</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>pyt1 [0]</activationId>
+  <rule>pyt1</rule>
   <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>1</factId>
-  <objectToString>pl.put.poznan.Odpowiedz@2cc988ca</objectToString>
+  <objectToString>pl.put.poznan.Odpowiedz@478e3145</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
   <activationId>pyt1 [0]</activationId>
   <rule>pyt1</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>6</type>
-  <activationId>pyt2 [1]</activationId>
-  <rule>pyt2</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>4</type>
-  <activationId>pyt3 [2]</activationId>
-  <rule>pyt3</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ObjectLogEvent>
-  <type>1</type>
-  <factId>2</factId>
-  <objectToString>pl.put.poznan.Odpowiedz@4db5350a</objectToString>
-</org.drools.audit.event.ObjectLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>7</type>
-  <activationId>pyt2 [1]</activationId>
-  <rule>pyt2</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>6</type>
-  <activationId>pyt3 [2]</activationId>
-  <rule>pyt3</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>4</type>
-  <activationId>Rosja [3]</activationId>
-  <rule>Rosja</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ObjectLogEvent>
-  <type>1</type>
-  <factId>3</factId>
-  <objectToString>pl.put.poznan.Odpowiedz@20305cfa</objectToString>
-</org.drools.audit.event.ObjectLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>7</type>
-  <activationId>pyt3 [2]</activationId>
-  <rule>pyt3</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>6</type>
-  <activationId>Rosja [3]</activationId>
-  <rule>Rosja</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>7</type>
-  <activationId>Rosja [3]</activationId>
-  <rule>Rosja</rule>
   <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 </object-stream>

@@ -10,7 +10,7 @@ import pl.put.poznan.*;
 
 
 
-rule "Norwegia"
+rule "tNorwegia"
 
     when
         Odpowiedz(pytanie == "id_2", tekst == "Norweskie")
@@ -19,7 +19,7 @@ rule "Norwegia"
 
 end
 
-rule "Rosja"
+rule "tRosja"
     //include attributes such as "salience" here...
     when
        Odpowiedz(pytanie == "id_3", prawda)
@@ -28,7 +28,7 @@ rule "Rosja"
 
 end
 
-rule "Wlochy"
+rule "tWlochy"
     //include attributes such as "salience" here...
     when
        Odpowiedz(pytanie == "id_4", prawda)
@@ -37,11 +37,287 @@ rule "Wlochy"
 
 end
 
-rule "Afryka"
+rule "tAfryka"
     //include attributes such as "salience" here...
     when
        Odpowiedz(pytanie == "id_4", !prawda)
     then
        Odpowiedz.oglos("Pewnie afryka ;)");
 
+end
+
+rule "Albania"
+	when
+	then
+		//Odpowiedz.oglos("Albania");
+end
+
+rule "Andora"
+	when
+	then
+		//Odpowiedz.oglos("Andora");
+end
+
+rule "Austria"
+	when
+	then
+		//Odpowiedz.oglos("Austria");
+end
+
+rule "Belgia"
+	when
+	then
+		//Odpowiedz.oglos("Belgia");
+end
+
+rule "Bialorus"
+	when
+	then
+		//Odpowiedz.oglos("Bialorus");
+end
+
+rule "Bosnia i Hercegowina"
+	when
+	then
+		//Odpowiedz.oglos("Bosnia i Hercegowina");
+end
+
+rule "Bulgaria"
+	when
+	then
+		//Odpowiedz.oglos("Bulgaria");
+end
+
+rule "Chorwacja"
+	when
+	then
+		//Odpowiedz.oglos("Chorwacja");
+end
+
+rule "Czarnogora"
+	when
+	then
+		//Odpowiedz.oglos("Czarnogora");
+end
+
+rule "Czechy"
+	when
+	then
+		//Odpowiedz.oglos("Czechy");
+end
+
+rule "Dania"
+	when
+	then
+		//Odpowiedz.oglos("Dania");
+end
+
+rule "Estonia"
+	when
+	then
+		//Odpowiedz.oglos("Estonia");
+end
+
+rule "Finlandia"
+	when
+	then
+		//Odpowiedz.oglos("Finlandia");
+end
+
+rule "Francja"
+	when
+	then
+		//Odpowiedz.oglos("Francja");
+end
+
+rule "Grecja"
+	when
+	then
+		//Odpowiedz.oglos("Grecja");
+end
+
+rule "Hiszpania"
+	when
+	then
+		//Odpowiedz.oglos("Hiszpania");
+end
+
+rule "Holandia"
+	when
+	then
+		//Odpowiedz.oglos("Holandia");
+end
+
+rule "Irlandia"
+	when
+	then
+		//Odpowiedz.oglos("Irlandia");
+end
+
+rule "Islandia"
+	when
+	then
+		//Odpowiedz.oglos("Islandia");
+end
+
+rule "Kazachstan"
+	when
+	then
+		//Odpowiedz.oglos("Kazachstan");
+end
+
+rule "Liechtenstein"
+	when
+	then
+		//Odpowiedz.oglos("Liechtenstein");
+end
+
+rule "Litwa"
+	when
+	then
+		//Odpowiedz.oglos("Litwa");
+end
+
+rule "Luksemburg"
+	when
+	then
+		//Odpowiedz.oglos("Luksemburg");
+end
+
+rule "Lotwa"
+	when
+	then
+		//Odpowiedz.oglos("Lotwa");
+end
+
+rule "Macedonia"
+	when
+	then
+		//Odpowiedz.oglos("Macedonia");
+end
+
+rule "Malta"
+	when
+	then
+		//Odpowiedz.oglos("Malta");
+end
+
+rule "Moldawia"
+	when
+	then
+		//Odpowiedz.oglos("Moldawia");
+end
+
+rule "Monako"
+	when
+	then
+		//Odpowiedz.oglos("Monako");
+end
+
+rule "Niemcy"
+	when
+	then
+		//Odpowiedz.oglos("Niemcy");
+end
+
+rule "Norwegia"
+	when
+	then
+		//Odpowiedz.oglos("Norwegia");
+end
+
+rule "Polska"
+	when
+	then
+		//Odpowiedz.oglos("Polska");
+end
+
+rule "Portugalia"
+	when
+	then
+		//Odpowiedz.oglos("Portugalia");
+end
+
+rule "Rosja"
+	when
+	then
+		//Odpowiedz.oglos("Rosja");
+end
+
+rule "Rumunia"
+	when
+	then
+		//Odpowiedz.oglos("Rumunia");
+end
+
+rule "San Marino"
+	when
+	then
+		//Odpowiedz.oglos("San Marino");
+end
+
+rule "Serbia"
+	when
+	then
+		//Odpowiedz.oglos("Serbia");
+end
+
+rule "Slowacja"
+	when
+	then
+		//Odpowiedz.oglos("Slowacja");
+end
+
+rule "Slowenia"
+	when
+	then
+		//Odpowiedz.oglos("Slowenia");
+end
+
+rule "Szwajcaria"
+	when
+	then
+		//Odpowiedz.oglos("Szwajcaria");
+end
+
+rule "Szwecja"
+	when
+	then
+		//Odpowiedz.oglos("Szwecja");
+end
+
+rule "Turcja"
+	when
+	then
+		//Odpowiedz.oglos("Turcja");
+end
+
+rule "Ukraina"
+	when
+	then
+		//Odpowiedz.oglos("Ukraina");
+end
+
+rule "Watykan"
+	when
+	then
+		//Odpowiedz.oglos("Watykan");
+end
+
+rule "Wegry"
+	when
+	then
+		//Odpowiedz.oglos("Wegry");
+end
+
+rule "Wielka Brytania"
+	when
+	then
+		//Odpowiedz.oglos("Wielka Brytania");
+end
+
+rule "Wlochy"
+	when
+	then
+		//Odpowiedz.oglos("Wlochy");
 end

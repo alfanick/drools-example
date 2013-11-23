@@ -58,6 +58,9 @@ public class Pytanie {
           pytanie.getOdpowiedzi().toArray(),
           pytanie.getOdpowiedzi().get(0));
       
+      if (odpowiedz == null)
+        return null;
+      
       // zalozmy ze to liczba
       if (odpowiedz instanceof Double) {
         return new Odpowiedz(id, ((Double)odpowiedz).floatValue());
@@ -67,6 +70,9 @@ public class Pytanie {
         } else
         if (((String) odpowiedz).equalsIgnoreCase("nie")) {
           return new Odpowiedz(id, false);
+        } else
+        if (((String) odpowiedz).equalsIgnoreCase("nie wiem")) {
+          return null;
         } else {
           return new Odpowiedz(id, (String) odpowiedz);
         }
