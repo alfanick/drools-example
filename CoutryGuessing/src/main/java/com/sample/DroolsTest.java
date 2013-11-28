@@ -1,5 +1,8 @@
 package com.sample;
 
+import java.awt.List;
+import java.lang.reflect.Array;
+
 import org.drools.KnowledgeBase;
 import org.drools.KnowledgeBaseFactory;
 import org.drools.builder.KnowledgeBuilder;
@@ -11,6 +14,7 @@ import org.drools.io.ResourceFactory;
 import org.drools.logger.KnowledgeRuntimeLogger;
 import org.drools.logger.KnowledgeRuntimeLoggerFactory;
 import org.drools.runtime.StatefulKnowledgeSession;
+import org.drools.runtime.StatelessKnowledgeSession;
 
 /**
  * This is a sample class to launch a rule.
@@ -21,10 +25,10 @@ public class DroolsTest {
         try {
             // load up the knowledge base
             KnowledgeBase kbase = readKnowledgeBase();
-            StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession();
+            StatelessKnowledgeSession ksession = kbase.newStatelessKnowledgeSession();
             KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession, "test");
             // go !
-            ksession.fireAllRules();
+            ksession.execute(new List());
             logger.close();
         } catch (Throwable t) {
             t.printStackTrace();

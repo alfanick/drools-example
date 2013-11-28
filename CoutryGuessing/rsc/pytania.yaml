@@ -1,10 +1,12 @@
 id_1:
   pytanie: "Czy to państwo ma dostęp do morza?"
+  wartosc: "dostep_do_morza"
   odpowiedzi:
     - "Tak"
     - "Nie"
 id_2:
   pytanie: "Do którego morza/oceanu ma ono dostęp (gdy ma dostęp do kilku wybierz tylko jedno)?"
+  wartosc: "morze"
   odpowiedzi:
     - "Baltyckie"
     - "Srodziemne"
@@ -14,11 +16,13 @@ id_2:
     - "Atlantyk"
 id_3:
   pytanie: "Czy to państwo leży na dwóch kontynentach?"
+  wartosc: "dwa_kontynenty"
   odpowiedzi:
     - "Tak"
     - "Nie"
 id_4:
   pytanie: "Czy jest to kraina pizzy i makaronu?"
+  wartosc: "lubia_makaron"
   odpowiedzi:
     - "Tak"
     - "Nie"

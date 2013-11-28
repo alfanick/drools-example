@@ -19,10 +19,12 @@ rule "pyt1"
 
 end
 
+
+
 rule "pyt2"
   
     when
-        Odpowiedz(pytanie == "id_1", prawda)
+        Odpowiedz(klucz == "dostep_do_morza", prawda)
     then
         insert(Pytanie.zadaj("id_2"));
 
@@ -30,14 +32,14 @@ end
 
 rule "pyt3"
 	when
-		Odpowiedz(pytanie == "id_2", tekst == "Baltyckie")
+		Odpowiedz(klucz == "morze", tekst == "Baltyckie")
 	then
 		insert(Pytanie.zadaj("id_3"));
 end
 		
 rule "pyt4"
 	when
-		Odpowiedz(pytanie == "id_2", tekst == "Srodziemne")
+		Odpowiedz(klucz == "morze", tekst == "Srodziemne")
 	then
 		insert(Pytanie.zadaj("id_4"));
 end	

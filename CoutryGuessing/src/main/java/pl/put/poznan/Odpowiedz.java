@@ -3,35 +3,35 @@ package pl.put.poznan;
 import javax.swing.JOptionPane;
 
 public class Odpowiedz {
-  private String pytanie;
+  private String klucz;
   private String tekst;
   private float liczba;
   private boolean prawda;
   
   public Odpowiedz(String p, String t) {
-    pytanie = p;
+    klucz = p;
     tekst = t;
     System.out.println("tworze stringa " + t);
   }
   
   public Odpowiedz(String p, float l) {
-    pytanie = p;
+    klucz = p;
     liczba = l;
     System.out.println("tworze floata");
   }
   
   public Odpowiedz(String p, boolean pd) {
-    pytanie = p;
+    klucz = p;
     prawda = pd;
     System.out.println("tworze boola");
   }
   
-  public String getPytanie() {
-    return pytanie;
+  public String getKlucz() {
+    return klucz;
   }
   
-  public void setPytanie(String p) {
-    pytanie = p;
+  public void setKlucz(String p) {
+    klucz = p;
   }
   
   public String getTekst() {

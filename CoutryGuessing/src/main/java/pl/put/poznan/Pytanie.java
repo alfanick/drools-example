@@ -16,6 +16,7 @@ import org.yaml.snakeyaml.*;
 public class Pytanie {
   private String id;
   private String tresc;
+  private String wartosc;
   private ArrayList<String> odpowiedzi;
   
   public Pytanie() {
@@ -36,6 +37,14 @@ public class Pytanie {
   
   public void setTresc(String t) {
     tresc = t;
+  }
+ 
+  public String getWartosc() {
+    return wartosc;
+  }
+  
+  public void setWartosc(String w) {
+    wartosc = w;
   }
 
   public ArrayList<String> getOdpowiedzi() {
@@ -63,18 +72,18 @@ public class Pytanie {
       
       // zalozmy ze to liczba
       if (odpowiedz instanceof Double) {
-        return new Odpowiedz(id, ((Double)odpowiedz).floatValue());
+        return new Odpowiedz(pytanie.wartosc, ((Double)odpowiedz).floatValue());
       } else {
         if (((String) odpowiedz).equalsIgnoreCase("tak")) {
-          return new Odpowiedz(id, true);
+          return new Odpowiedz(pytanie.wartosc, true);
         } else
         if (((String) odpowiedz).equalsIgnoreCase("nie")) {
-          return new Odpowiedz(id, false);
+          return new Odpowiedz(pytanie.wartosc, false);
         } else
         if (((String) odpowiedz).equalsIgnoreCase("nie wiem")) {
           return null;
         } else {
-          return new Odpowiedz(id, (String) odpowiedz);
+          return new Odpowiedz(pytanie.wartosc, (String) odpowiedz);
         }
       }
     } else {
@@ -97,6 +106,7 @@ public class Pytanie {
         for (Map.Entry<String, Map<String, Object>> entry : map.entrySet()) {
           Pytanie pytanie = new Pytanie();
           pytanie.setId(entry.getKey());
+          pytanie.setWartosc((String)(entry.getValue().get("wartosc")));
           pytanie.setTresc((String)(entry.getValue().get("pytanie")));
           pytanie.setOdpowiedzi((ArrayList<String>)(entry.getValue().get("odpowiedzi")));
           

@@ -13,7 +13,7 @@ import pl.put.poznan.*;
 rule "tNorwegia"
 
     when
-        Odpowiedz(pytanie == "id_2", tekst == "Norweskie")
+        Odpowiedz(klucz == "morze", tekst == "Norweskie")
     then
         Odpowiedz.oglos("Norwegia");
 
@@ -22,7 +22,7 @@ end
 rule "tRosja"
     //include attributes such as "salience" here...
     when
-       Odpowiedz(pytanie == "id_3", prawda)
+       Odpowiedz(klucz == "dwa_kontynenty", prawda)
     then
        Odpowiedz.oglos("Rosja");
 
@@ -31,7 +31,7 @@ end
 rule "tWlochy"
     //include attributes such as "salience" here...
     when
-       Odpowiedz(pytanie == "id_4", prawda)
+       Odpowiedz(klucz == "lubia_makaron", prawda)
     then
        Odpowiedz.oglos("Wlochy");
 
@@ -40,7 +40,7 @@ end
 rule "tAfryka"
     //include attributes such as "salience" here...
     when
-       Odpowiedz(pytanie == "id_4", !prawda)
+       Odpowiedz(klucz == "lubia_makaron", !prawda)
     then
        Odpowiedz.oglos("Pewnie afryka ;)");
 
