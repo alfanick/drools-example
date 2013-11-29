@@ -2,25 +2,25 @@ package pl.put.poznan;
 
 import javax.swing.JOptionPane;
 
-public class Odpowiedz {
+public class Fakt {
   private String klucz;
   private String tekst;
   private float liczba;
   private boolean prawda;
   
-  public Odpowiedz(String p, String t) {
+  public Fakt(String p, String t) {
     klucz = p;
     tekst = t;
-    System.out.println("tworze stringa " + t);
+    System.out.println("tworze stringa '" + t+"'");
   }
   
-  public Odpowiedz(String p, float l) {
+  public Fakt(String p, float l) {
     klucz = p;
     liczba = l;
     System.out.println("tworze floata");
   }
   
-  public Odpowiedz(String p, boolean pd) {
+  public Fakt(String p, boolean pd) {
     klucz = p;
     prawda = pd;
     System.out.println("tworze boola");

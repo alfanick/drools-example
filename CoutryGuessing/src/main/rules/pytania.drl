@@ -10,44 +10,169 @@ import com.sample.DroolsTest.*
 import pl.put.poznan.*;
 
 
-rule "pyt1"
-
-    when
+rule "start"
+	salience 1000
+	when
        
     then
-        insert(Pytanie.zadaj("id_1"));
+        insert(Pytanie.zadaj("polozenie"));
 
 end
 
-
-
-rule "pyt2"
-  
-    when
-        Odpowiedz(klucz == "dostep_do_morza", prawda)
-    then
-        insert(Pytanie.zadaj("id_2"));
-
-end
-
-rule "pyt3"
+rule "wyspiarski"
 	when
-		Odpowiedz(klucz == "morze", tekst == "Baltyckie")
+		Fakt(klucz=="polozenie", tekst != "Europa wschodnia")
 	then
-		insert(Pytanie.zadaj("id_3"));
+		Fakt o = Pytanie.zadaj("wyspiarski");
+        if (o.getPrawda())
+        	insert(new Fakt("ma_morze", true));
+end
+
+rule "wladza"
+	when
+	then
+		insert(Pytanie.zadaj("wladza"));
+end
+
+rule "euro"
+	when
+		Fakt(klucz=="polozenie", tekst in ("Europa polnocna", "Europa poludniowa", "Europa zachodnia"))
+	then
+		insert(Pytanie.zadaj("euro"));
+end
+
+rule "samochody"
+	salience 1
+	when
+	then
+		insert(Pytanie.zadaj("samochody"));
+end
+
+rule "czy_islandia"
+	when
+		Fakt(klucz=="polozenie", tekst == "Europa polnocna")
+	then
+		insert(Pytanie.zadaj("islandia"));
+end
+
+rule "czy_szwecja"
+	when
+		Fakt(klucz=="polozenie", tekst == "Europa polnocna")
+	then
+		insert(Pytanie.zadaj("szwecja"));
+end
+
+rule "czy_wodka"
+	when
+		Fakt(klucz=="polozenie", tekst == "Europa polnocna")
+		Fakt(klucz=="szwecja", !prawda)
+	then
+		insert(Pytanie.zadaj("czy_wodka"));
+end
+
+rule "marka_samochodu_w"
+	when
+		Fakt(klucz=="polozenie", tekst == "Europa zachodnia")
+		Fakt(klucz=="samochody", prawda)
+	then
+		insert(Pytanie.zadaj("marka_samochodu_w"));
+end
+
+rule "ma_morze"
+	when
+		Fakt(klucz=="wyspiarski", !prawda) or
+		Fakt(klucz=="polozenie", tekst == "Europa wschodnia")
+	then
+		insert(Pytanie.zadaj("ma_morze"));
 end
 		
-rule "pyt4"
+rule "morze_n"
 	when
-		Odpowiedz(klucz == "morze", tekst == "Srodziemne")
+		Fakt(klucz=="ma_morze", prawda)
+		Fakt(klucz=="polozenie", tekst=="Europa polnocna")
 	then
-		insert(Pytanie.zadaj("id_4"));
-end	
+		insert(Pytanie.zadaj("morze_n"));
+end
 		
+rule "morze_w"
+	when
+		Fakt(klucz=="ma_morze", prawda)
+		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
+	then
+		insert(Pytanie.zadaj("morze_w"));
+end
 		
+rule "morze_e"
+	when
+		Fakt(klucz=="ma_morze", prawda)
+		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
+	then
+		insert(Pytanie.zadaj("morze_e"));
+end
 		
-		
-		
-		
-		
-		
+rule "morze_s"
+	when
+		Fakt(klucz=="ma_morze", prawda)
+		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
+	then
+		insert(Pytanie.zadaj("morze_s"));
+end
+
+rule "piwo_n"
+	when
+		Fakt(klucz=="polozenie", tekst=="Europa polnocna")
+	then
+		insert(Pytanie.zadaj("piwo_n"));
+end
+
+rule "piwo_s"
+	when
+		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
+	then
+		insert(Pytanie.zadaj("piwo_s"));
+end
+
+rule "piwo_e"
+	when
+		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
+	then
+		insert(Pytanie.zadaj("piwo_e"));
+end
+
+rule "piwo_w"
+	when
+		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
+	then
+		insert(Pytanie.zadaj("piwo_w"));
+end
+
+rule "balkanskie"
+	when
+		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
+	then
+		insert(Pytanie.zadaj("balkanskie"));
+end
+
+rule "czy_grecja"
+	salience 100
+	when
+		Fakt(klucz=="balkaskie", prawda)
+	then
+		insert(Pytanie.zadaj("grecja"));
+end
+
+rule "czy_turcja"
+	salience 99
+	when
+		Fakt(klucz=="balkanskie", prawda)
+	then
+		insert(Pytanie.zadaj("turcja"));
+end
+
+rule "stolica_balkany"
+	salience 10
+	when
+		Fakt(klucz=="balkanskie", prawda)
+	then
+		insert(Pytanie.zadaj("stolica_balkany"));
+end

@@ -55,35 +55,36 @@ public class Pytanie {
     odpowiedzi = o;
   }
   
-  public static Odpowiedz zadaj(String id) {
+  public static Fakt zadaj(String id) {
     Pytanie pytanie = Pytanie.baza().get(id);
     
     if (pytanie != null) {
-      Object odpowiedz = (Object)JOptionPane.showInputDialog(null, 
-          pytanie.getTresc(),
-          id,
-          JOptionPane.QUESTION_MESSAGE,
-          null,
-          pytanie.getOdpowiedzi().toArray(),
-          pytanie.getOdpowiedzi().get(0));
+      Object odpowiedz;
       
-      if (odpowiedz == null)
-        return null;
+      do {
+        odpowiedz = (Object)JOptionPane.showInputDialog(null, 
+            pytanie.getTresc(),
+            id,
+            JOptionPane.QUESTION_MESSAGE,
+            null,
+            pytanie.getOdpowiedzi().toArray(),
+            pytanie.getOdpowiedzi().get(0));
+      } while (odpowiedz == null);
       
       // zalozmy ze to liczba
       if (odpowiedz instanceof Double) {
-        return new Odpowiedz(pytanie.wartosc, ((Double)odpowiedz).floatValue());
+        return new Fakt(pytanie.wartosc, ((Double)odpowiedz).floatValue());
       } else {
         if (((String) odpowiedz).equalsIgnoreCase("tak")) {
-          return new Odpowiedz(pytanie.wartosc, true);
+          return new Fakt(pytanie.wartosc, true);
         } else
         if (((String) odpowiedz).equalsIgnoreCase("nie")) {
-          return new Odpowiedz(pytanie.wartosc, false);
+          return new Fakt(pytanie.wartosc, false);
         } else
         if (((String) odpowiedz).equalsIgnoreCase("nie wiem")) {
           return null;
         } else {
-          return new Odpowiedz(pytanie.wartosc, (String) odpowiedz);
+          return new Fakt(pytanie.wartosc, (String) odpowiedz);
         }
       }
     } else {

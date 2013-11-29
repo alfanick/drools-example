@@ -8,316 +8,379 @@ import com.sample.DroolsTest.*
 //declare any global variables here
 import pl.put.poznan.*;
 
-
-
-rule "tNorwegia"
-
-    when
-        Odpowiedz(klucz == "morze", tekst == "Norweskie")
-    then
-        Odpowiedz.oglos("Norwegia");
-
-end
-
-rule "tRosja"
-    //include attributes such as "salience" here...
-    when
-       Odpowiedz(klucz == "dwa_kontynenty", prawda)
-    then
-       Odpowiedz.oglos("Rosja");
-
-end
-
-rule "tWlochy"
-    //include attributes such as "salience" here...
-    when
-       Odpowiedz(klucz == "lubia_makaron", prawda)
-    then
-       Odpowiedz.oglos("Wlochy");
-
-end
-
-rule "tAfryka"
-    //include attributes such as "salience" here...
-    when
-       Odpowiedz(klucz == "lubia_makaron", !prawda)
-    then
-       Odpowiedz.oglos("Pewnie afryka ;)");
-
+rule "Znamy Odpowiedz"
+	salience 10001
+	when
+		Fakt(klucz=="panstwo", $panstwo : tekst)
+	then
+		Fakt.oglos($panstwo);
+		drools.halt();
 end
 
 rule "Albania"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
 	then
-		//Odpowiedz.oglos("Albania");
+		insert(new Fakt("panstwo", "Albania"));
 end
 
 rule "Andora"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
 	then
-		//Odpowiedz.oglos("Andora");
+		insert(new Fakt("panstwo", "Andora"));
 end
 
 rule "Austria"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
 	then
-		//Odpowiedz.oglos("Austria");
+		insert(new Fakt("panstwo", "Austria"));
 end
 
 rule "Belgia"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
 	then
-		//Odpowiedz.oglos("Belgia");
+		insert(new Fakt("panstwo", "Belgia"));
 end
 
 rule "Bialorus"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
 	then
-		//Odpowiedz.oglos("Bialorus");
+		insert(new Fakt("panstwo", "Bialorus"));
 end
 
 rule "Bosnia i Hercegowina"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
 	then
-		//Odpowiedz.oglos("Bosnia i Hercegowina");
+		insert(new Fakt("panstwo", "Bosnia i Hercegowina"));
 end
 
 rule "Bulgaria"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
 	then
-		//Odpowiedz.oglos("Bulgaria");
+		insert(new Fakt("panstwo", "Bulgaria"));
 end
 
 rule "Chorwacja"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
 	then
-		//Odpowiedz.oglos("Chorwacja");
+		insert(new Fakt("panstwo", "Chorwacja"));
 end
 
 rule "Czarnogora"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
 	then
-		//Odpowiedz.oglos("Czarnogora");
+		insert(new Fakt("panstwo", "Czarnogora"));
 end
 
 rule "Czechy"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
 	then
-		//Odpowiedz.oglos("Czechy");
+		insert(new Fakt("panstwo", "Czechy"));
 end
 
 rule "Dania"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
 	then
-		//Odpowiedz.oglos("Dania");
+		insert(new Fakt("panstwo", "Dania"));
 end
 
 rule "Estonia"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
 	then
-		//Odpowiedz.oglos("Estonia");
+		insert(new Fakt("panstwo", "Estonia"));
 end
 
 rule "Finlandia"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa polnocna")
 	then
-		//Odpowiedz.oglos("Finlandia");
+		insert(new Fakt("panstwo", "Finlandia"));
 end
 
 rule "Francja"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
 	then
-		//Odpowiedz.oglos("Francja");
+		insert(new Fakt("panstwo", "Francja"));
 end
 
 rule "Grecja"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
 	then
-		//Odpowiedz.oglos("Grecja");
+		insert(new Fakt("panstwo", "Grecja"));
 end
 
 rule "Hiszpania"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
 	then
-		//Odpowiedz.oglos("Hiszpania");
+		insert(new Fakt("panstwo", "Hiszpania"));
 end
 
 rule "Holandia"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
 	then
-		//Odpowiedz.oglos("Holandia");
+		insert(new Fakt("panstwo", "Holandia"));
 end
 
 rule "Irlandia"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
 	then
-		//Odpowiedz.oglos("Irlandia");
+		insert(new Fakt("panstwo", "Irlandia"));
 end
 
 rule "Islandia"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa polnocna")
 	then
-		//Odpowiedz.oglos("Islandia");
+		insert(new Fakt("panstwo", "Islandia"));
 end
 
 rule "Kazachstan"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
 	then
-		//Odpowiedz.oglos("Kazachstan");
+		insert(new Fakt("panstwo", "Kazachstan"));
 end
 
 rule "Liechtenstein"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
 	then
-		//Odpowiedz.oglos("Liechtenstein");
+		insert(new Fakt("panstwo", "Liechtenstein"));
 end
 
 rule "Litwa"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
 	then
-		//Odpowiedz.oglos("Litwa");
+		insert(new Fakt("panstwo", "Litwa"));
 end
 
 rule "Luksemburg"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
 	then
-		//Odpowiedz.oglos("Luksemburg");
+		insert(new Fakt("panstwo", "Luksemburg"));
 end
 
 rule "Lotwa"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
 	then
-		//Odpowiedz.oglos("Lotwa");
+		insert(new Fakt("panstwo", "Lotwa"));
 end
 
 rule "Macedonia"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
 	then
-		//Odpowiedz.oglos("Macedonia");
+		insert(new Fakt("panstwo", "Macedonia"));
 end
 
 rule "Malta"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
 	then
-		//Odpowiedz.oglos("Malta");
+		insert(new Fakt("panstwo", "Malta"));
 end
 
 rule "Moldawia"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
 	then
-		//Odpowiedz.oglos("Moldawia");
+		insert(new Fakt("panstwo", "Moldawia"));
 end
 
 rule "Monako"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
 	then
-		//Odpowiedz.oglos("Monako");
+		insert(new Fakt("panstwo", "Monako"));
 end
 
 rule "Niemcy"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
 	then
-		//Odpowiedz.oglos("Niemcy");
+		insert(new Fakt("panstwo", "Niemcy"));
 end
 
 rule "Norwegia"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa polnocna")
 	then
-		//Odpowiedz.oglos("Norwegia");
+		insert(new Fakt("panstwo", "Norwegia"));
 end
 
 rule "Polska"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
 	then
-		//Odpowiedz.oglos("Polska");
+		insert(new Fakt("panstwo", "Polska"));
 end
 
 rule "Portugalia"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
 	then
-		//Odpowiedz.oglos("Portugalia");
+		insert(new Fakt("panstwo", "Portugalia"));
 end
 
 rule "Rosja"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
 	then
-		//Odpowiedz.oglos("Rosja");
+		insert(new Fakt("panstwo", "Rosja"));
 end
 
 rule "Rumunia"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa wchodnia")
 	then
-		//Odpowiedz.oglos("Rumunia");
+		insert(new Fakt("panstwo", "Rumunia"));
 end
 
 rule "San Marino"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
 	then
-		//Odpowiedz.oglos("San Marino");
+		insert(new Fakt("panstwo", "San Marino"));
 end
 
 rule "Serbia"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
 	then
-		//Odpowiedz.oglos("Serbia");
+		insert(new Fakt("panstwo", "Serbia"));
 end
 
 rule "Slowacja"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
 	then
-		//Odpowiedz.oglos("Slowacja");
+		insert(new Fakt("panstwo", "Slowacja"));
 end
 
 rule "Slowenia"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
 	then
-		//Odpowiedz.oglos("Slowenia");
+		insert(new Fakt("panstwo", "Slowenia"));
 end
 
 rule "Szwajcaria"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
 	then
-		//Odpowiedz.oglos("Szwajcaria");
+		insert(new Fakt("panstwo", "Szwajcaria"));
 end
 
 rule "Szwecja"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa polnocna")
 	then
-		//Odpowiedz.oglos("Szwecja");
+		insert(new Fakt("panstwo", "Szwecja"));
 end
 
 rule "Turcja"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
 	then
-		//Odpowiedz.oglos("Turcja");
+		insert(new Fakt("panstwo", "Turcja"));
 end
 
 rule "Ukraina"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
 	then
-		//Odpowiedz.oglos("Ukraina");
+		insert(new Fakt("panstwo", "Ukraina"));
 end
 
 rule "Watykan"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
 	then
-		//Odpowiedz.oglos("Watykan");
+		insert(new Fakt("panstwo", "Watykan"));
 end
 
 rule "Wegry"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
 	then
-		//Odpowiedz.oglos("Wegry");
+		insert(new Fakt("panstwo", "Wegry"));
 end
 
 rule "Wielka Brytania"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
 	then
-		//Odpowiedz.oglos("Wielka Brytania");
+		insert(new Fakt("panstwo", "Wielka Brytania"));
 end
 
 rule "Wlochy"
+	salience 10000
 	when
+		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
 	then
-		//Odpowiedz.oglos("Wlochy");
+		insert(new Fakt("panstwo", "Wlochy"));
 end

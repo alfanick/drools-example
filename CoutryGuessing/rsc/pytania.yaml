@@ -1,28 +1,193 @@
-id_1:
-  pytanie: "Czy to państwo ma dostęp do morza?"
-  wartosc: "dostep_do_morza"
+polozenie:
+  pytanie: W jakiej części Europy leży to państwo?
+  wartosc: polozenie
   odpowiedzi:
-    - "Tak"
-    - "Nie"
-id_2:
-  pytanie: "Do którego morza/oceanu ma ono dostęp (gdy ma dostęp do kilku wybierz tylko jedno)?"
-  wartosc: "morze"
+    - Europa polnocna
+    - Europa poludniowa
+    - Europa wschodnia
+    - Europa zachodnia
+wyspiarski:
+  pytanie: Czy jest to kraj wyspiarski?
+  wartosc: wyspiarski
   odpowiedzi:
-    - "Baltyckie"
-    - "Srodziemne"
-    - "Polnocne"
-    - "Czarne"
-    - "Norweskie"
-    - "Atlantyk"
-id_3:
-  pytanie: "Czy to państwo leży na dwóch kontynentach?"
-  wartosc: "dwa_kontynenty"
+    - Tak
+    - Nie
+ma_morze:
+  pytanie: Czy to państwo ma dostęp do morza lub oceanu?
+  wartosc: ma_morze
   odpowiedzi:
-    - "Tak"
-    - "Nie"
-id_4:
-  pytanie: "Czy jest to kraina pizzy i makaronu?"
-  wartosc: "lubia_makaron"
+    - Tak
+    - Nie
+morze_n:
+  pytanie: Do jakiego morza lub oceanu ma dostęp ten kraj?
+  wartosc: morze
   odpowiedzi:
-    - "Tak"
-    - "Nie"
+    - Ocean Atlantycki
+    - Morze Norweskie
+    - Morze Polnocne
+    - Morze Baltyckie
+    - Morze Barentsa
+morze_w:
+  pytanie: Do jakiego morza lub oceanu ma dostęp ten kraj?
+  wartosc: morze
+  odpowiedzi:
+    - Ocean Atlantycki
+    - Morze Polnocne
+    - Morze Baltyckie
+    - Morze Srodziemne
+morze_e:
+  pytanie: Do jakiego morza lub oceanu ma dostęp ten kraj?
+  wartosc: morze
+  odpowiedzi:
+    - Ocean Arktyczny
+    - Morze Baltyckie
+    - Morze Czarne
+    - Morze Kaspijskie
+    - Morze Barentsa
+morze_s:
+  pytanie: Do jakiego morza lub oceanu ma dostęp ten kraj?
+  wartosc: morze
+  odpowiedzi:
+    - Morze Czarne
+    - Morze Srodziemne
+euro:
+  pytanie: Czy walutą tego państwa jest euro?
+  wartosc: euro
+  odpowiedzi:
+    - Tak
+    - Nie
+wladza:
+  pytanie: Kto jest przywódcą tego kraju?
+  wartosc: wladza
+  odpowiedzi:
+    - Prezydent
+    - Monarcha
+    - Papiez
+samochody:
+  pytanie: Czy kraj posiada własną markę samochodową?
+  wartosc: samochody
+  odpowiedzi:
+    - Tak
+    - Nie
+marka_samochodu_w:
+  pytanie: Jaką markę?
+  wartosc: marka_samochodu
+  odpowiedzi:
+    - BMW
+    - Audi
+    - Mercedes
+    - Volkswagen
+    - Porsche
+    - Citroen
+    - Peugeot
+    - Seat
+    - Opel
+    - Vauxhall
+    - Bentley
+    - Rolls Royce
+    - Aston Martin
+    - Land Rover
+    - Nie wiem
+ 
+piwo_n:
+  pytanie: Jaką markę piwa produkuje to państwo?
+  wartosc: piwo
+  odpowiedzi:
+    - Nie wiem
+    - Nils Oscar
+    - Sahti
+    - Vinbudin
+    - Frydenlund
+
+piwo_s:
+  pytanie: Jaką markę piwa produkuje to państwo?
+  wartosc: piwo
+  odpowiedzi:
+    - Nie wiem
+    - Peroni
+    - Zobras
+    - Keo
+    - Lasko
+    - Niksicko
+    - Jelen
+    - Nektar
+    - Szumensko
+
+piwo_w:
+  pytanie: Jaką markę piwa produkuje to państwo?
+  wartosc: piwo
+  odpowiedzi:
+    - Nie wiem
+    - Paulaner
+    - Grolsch
+    - Stiegl
+    - Zipfer
+
+piwo_e:
+  pytanie: Jaką markę piwa produkuje to państwo?
+  wartosc: piwo
+  odpowiedzi:
+    - Nie wiem
+    - Vodka ;) -> Rosja ;p
+    - Tyskie
+    - Tuborg
+    - Staropramen
+    - Zlaty Bazant
+    - Martiner
+ 
+islandia:
+  pytanie: Czy występują tam gejzery, wulkany, lód i słońce?
+  wartosc: islandia
+  odpowiedzi:
+    - Tak
+    - Nie
+
+szwecja:
+  pytanie: Czy w tym kraju obowiązuje częściowa prohibicja?
+  wartosc: szwecja
+  odpowiedzi:
+    - Tak
+    - Nie
+
+czy_wodka:
+  pytanie: Czy w tym państwie jest produkowana wódka o takiej samej nazwie jak nazwa państwa?
+  wartosc: czy_wodka
+  odpowiedzi:
+    - Tak
+    - Nie
+
+balkanskie:
+  pytanie: Czy jest to panstwo balkanskie?
+  wartosc: balkanskie
+  odpowiedzi:
+    - Tak
+    - Nie
+
+grecja:
+  pytanie: Czy jest to państwo Hellenów?
+  wartosc: grecja
+  odpowiedzi:
+    - Tak
+    - Nie
+
+turcja:
+  pytanie: Czy stolicą tego państwa było kiedyś Bizancjum?
+  wartosc: turcja
+  odpowiedzi:
+    - Tak
+    - Nie
+
+stolica_balkany:
+  pytanie: Stolicą tego państwa jest
+  wartosc: stolica
+  odpowiedzi:
+    - Sofia
+    - Bukareszt
+    - Belgrad
+    - Sarajewo
+    - Tirana
+    - Zagrzeb
+    - Podgorica
+    - Skopje
+    - Prisztyna
+    - Lublana
