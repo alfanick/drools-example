@@ -401,8 +401,10 @@ rule "Rosja"
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Wschod")
-		Fakt(klucz=="samochody", prawda)
-		Fakt(klucz=="piwo", tekst=="Vodka")
+		(or
+			Fakt(klucz=="samochody", prawda)
+			Fakt(klucz=="piwo", tekst=="Vodka")
+		)
 	then
 		insert(new Fakt("panstwo", "Rosja"));
 end
@@ -531,6 +533,7 @@ rule "Wielka Brytania"
 	when
 		Fakt(klucz=="polozenie", tekst=="Zachod")
 		Fakt(klucz=="wladza", tekst=="Monarcha")
+		Fakt(klucz=="wyspiarski", prawda)
 		(or
 			Fakt(klucz=="piwo", tekst=="Guinness")
 			(and

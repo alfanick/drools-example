@@ -150,7 +150,7 @@ end
 rule "czy_grecja"
 	salience 100
 	when
-		Fakt(klucz=="balkaskie", prawda)
+		Fakt(klucz=="balkanskie", prawda)
 	then
 		insert(Pytanie.zadaj("grecja"));
 end
