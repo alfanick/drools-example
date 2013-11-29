@@ -25,10 +25,10 @@ public class DroolsTest {
         try {
             // load up the knowledge base
             KnowledgeBase kbase = readKnowledgeBase();
-            StatelessKnowledgeSession ksession = kbase.newStatelessKnowledgeSession();
+            StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession();
             KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession, "test");
             // go !
-            ksession.execute(new List());
+            ksession.fireAllRules();
             logger.close();
         } catch (Throwable t) {
             t.printStackTrace();
