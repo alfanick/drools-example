@@ -22,7 +22,7 @@ end
 rule "wyspiarski"
 	salience 100
 	when
-		Fakt(klucz=="polozenie", tekst != "Europa wschodnia")
+		Fakt(klucz=="polozenie", tekst != "Wschod")
 	then
 		Fakt o = Pytanie.zadaj("wyspiarski");
         insert(o);
@@ -38,7 +38,6 @@ end
 
 rule "euro"
 	when
-		Fakt(klucz=="polozenie", tekst in ("Europa polnocna", "Europa poludniowa", "Europa zachodnia"))
 	then
 		insert(Pytanie.zadaj("euro"));
 end
@@ -52,14 +51,14 @@ end
 
 rule "czy_szwecja"
 	when
-		Fakt(klucz=="polozenie", tekst == "Europa polnocna")
+		Fakt(klucz=="polozenie", tekst == "Polnoc")
 	then
 		insert(Pytanie.zadaj("szwecja"));
 end
 
 rule "czy_wodka"
 	when
-		Fakt(klucz=="polozenie", tekst == "Europa polnocna")
+		Fakt(klucz=="polozenie", tekst == "Polnoc")
 		Fakt(klucz=="szwecja", !prawda)
 	then
 		insert(Pytanie.zadaj("czy_wodka"));
@@ -67,7 +66,7 @@ end
 
 rule "marka_samochodu_w"
 	when
-		Fakt(klucz=="polozenie", tekst == "Europa zachodnia")
+		Fakt(klucz=="polozenie", tekst == "Zachod")
 		Fakt(klucz=="samochody", prawda)
 	then
 		insert(Pytanie.zadaj("marka_samochodu_w"));
@@ -76,7 +75,7 @@ end
 rule "ma_morze"
 	when
 		Fakt(klucz=="wyspiarski", !prawda) or
-		Fakt(klucz=="polozenie", tekst == "Europa wschodnia")
+		Fakt(klucz=="polozenie", tekst == "Wschod")
 	then
 		insert(Pytanie.zadaj("ma_morze"));
 end
@@ -84,7 +83,7 @@ end
 rule "morze_n"
 	when
 		Fakt(klucz=="ma_morze", prawda)
-		Fakt(klucz=="polozenie", tekst=="Europa polnocna")
+		Fakt(klucz=="polozenie", tekst=="Polnoc")
 	then
 		insert(Pytanie.zadaj("morze_n"));
 end
@@ -92,7 +91,7 @@ end
 rule "morze_w"
 	when
 		Fakt(klucz=="ma_morze", prawda)
-		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
+		Fakt(klucz=="polozenie", tekst=="Wschod")
 	then
 		insert(Pytanie.zadaj("morze_w"));
 end
@@ -100,7 +99,7 @@ end
 rule "morze_e"
 	when
 		Fakt(klucz=="ma_morze", prawda)
-		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
+		Fakt(klucz=="polozenie", tekst=="Zachod")
 	then
 		insert(Pytanie.zadaj("morze_e"));
 end
@@ -108,42 +107,42 @@ end
 rule "morze_s"
 	when
 		Fakt(klucz=="ma_morze", prawda)
-		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
+		Fakt(klucz=="polozenie", tekst=="Poludnie")
 	then
 		insert(Pytanie.zadaj("morze_s"));
 end
 
 rule "piwo_n"
 	when
-		Fakt(klucz=="polozenie", tekst=="Europa polnocna")
+		Fakt(klucz=="polozenie", tekst=="Polnoc")
 	then
 		insert(Pytanie.zadaj("piwo_n"));
 end
 
 rule "piwo_s"
 	when
-		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
+		Fakt(klucz=="polozenie", tekst=="Poludnie")
 	then
 		insert(Pytanie.zadaj("piwo_s"));
 end
 
 rule "piwo_e"
 	when
-		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
+		Fakt(klucz=="polozenie", tekst=="Wschod")
 	then
 		insert(Pytanie.zadaj("piwo_e"));
 end
 
 rule "piwo_w"
 	when
-		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
+		Fakt(klucz=="polozenie", tekst=="Zachod")
 	then
 		insert(Pytanie.zadaj("piwo_w"));
 end
 
 rule "balkanskie"
 	when
-		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
+		Fakt(klucz=="polozenie", tekst=="Poludnie")
 	then
 		insert(Pytanie.zadaj("balkanskie"));
 end
