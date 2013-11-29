@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -17,7 +18,7 @@ public class Pytanie {
   private String id;
   private String tresc;
   private String wartosc;
-  private ArrayList<String> odpowiedzi;
+  private Map<String, String> odpowiedzi;
   
   public Pytanie() {
     
@@ -47,13 +48,22 @@ public class Pytanie {
     wartosc = w;
   }
 
-  public ArrayList<String> getOdpowiedzi() {
+  public Map<String, String> getOdpowiedzi() {
     return odpowiedzi;
   }
   
-  public void setOdpowiedzi(ArrayList<String> o) {
+  public void setOdpowiedzi(Map<String, String> o) {
     odpowiedzi = o;
   }
+  
+  public String getKeyByValue(String value) {
+    for (Entry<String, String> entry : odpowiedzi.entrySet()) {
+        if (value.equalsIgnoreCase(entry.getValue())) {
+            return entry.getKey();
+        }
+    }
+    return null;
+}
   
   public static Fakt zadaj(String id) {
     Pytanie pytanie = Pytanie.baza().get(id);
@@ -67,7 +77,7 @@ public class Pytanie {
             id,
             JOptionPane.QUESTION_MESSAGE,
             null,
-            pytanie.getOdpowiedzi().toArray(),
+            pytanie.getOdpowiedzi().values().toArray(),
             pytanie.getOdpowiedzi().get(0));
       } while (odpowiedz == null);
       
@@ -75,13 +85,15 @@ public class Pytanie {
       if (odpowiedz instanceof Double) {
         return new Fakt(pytanie.wartosc, ((Double)odpowiedz).floatValue());
       } else {
-        if (((String) odpowiedz).equalsIgnoreCase("tak")) {
+        String key = pytanie.getKeyByValue((String) odpowiedz);
+        
+        if (key.equalsIgnoreCase("t")) {
           return new Fakt(pytanie.wartosc, true);
         } else
-        if (((String) odpowiedz).equalsIgnoreCase("nie")) {
+        if (key.equalsIgnoreCase("n")) {
           return new Fakt(pytanie.wartosc, false);
         } else
-        if (((String) odpowiedz).equalsIgnoreCase("nie wiem")) {
+        if (key.equalsIgnoreCase("nw")) {
           return null;
         } else {
           return new Fakt(pytanie.wartosc, (String) odpowiedz);
@@ -95,6 +107,7 @@ public class Pytanie {
   }
   
   private static HashMap<String, Pytanie> zawartosc = new HashMap<String, Pytanie>();
+  @SuppressWarnings("unchecked")
   private static HashMap<String, Pytanie> baza() {
     if (Pytanie.zawartosc.isEmpty()) {
       // wczytaj
@@ -109,7 +122,7 @@ public class Pytanie {
           pytanie.setId(entry.getKey());
           pytanie.setWartosc((String)(entry.getValue().get("wartosc")));
           pytanie.setTresc((String)(entry.getValue().get("pytanie")));
-          pytanie.setOdpowiedzi((ArrayList<String>)(entry.getValue().get("odpowiedzi")));
+          pytanie.setOdpowiedzi((Map<String, String>)(entry.getValue().get("odpowiedzi")));
           
           Pytanie.zawartosc.put(entry.getKey(), pytanie);
         }

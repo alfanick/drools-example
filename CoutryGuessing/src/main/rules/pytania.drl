@@ -20,6 +20,7 @@ rule "start"
 end
 
 rule "wyspiarski"
+	salience 100
 	when
 		Fakt(klucz=="polozenie", tekst != "Europa wschodnia")
 	then
@@ -42,7 +43,7 @@ rule "euro"
 end
 
 rule "samochody"
-	salience 1
+	salience 100
 	when
 	then
 		insert(Pytanie.zadaj("samochody"));

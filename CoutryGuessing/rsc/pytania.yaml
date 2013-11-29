@@ -2,184 +2,185 @@ polozenie:
   pytanie: W jakiej części Europy leży to państwo?
   wartosc: polozenie
   odpowiedzi:
-    - Europa polnocna
-    - Europa poludniowa
-    - Europa wschodnia
-    - Europa zachodnia
+    Polnoc: Europa polnocna
+    Poludnie: Europa poludniowa
+    Wschod: Europa wschodnia
+    Zachod: Europa zachodnia
 wyspiarski:
   pytanie: Czy jest to kraj wyspiarski?
   wartosc: wyspiarski
   odpowiedzi:
-    - Tak
-    - Nie
+    T: Tak
+    N: Nie
 ma_morze:
   pytanie: Czy to państwo ma dostęp do morza lub oceanu?
   wartosc: ma_morze
   odpowiedzi:
-    - Tak
-    - Nie
+    T: Tak
+    N: Nie
 morze_n:
   pytanie: Do jakiego morza lub oceanu ma dostęp ten kraj?
   wartosc: morze
   odpowiedzi:
-    - Ocean Atlantycki
-    - Morze Norweskie
-    - Morze Polnocne
-    - Morze Baltyckie
-    - Morze Barentsa
+    Atlantyk: Ocean Atlantycki
+    Norweskie: Morze Norweskie
+    Polnocne: Morze Polnocne
+    Baltyk: Morze Baltyckie
+    Barentsa: Morze Barentsa
 morze_w:
   pytanie: Do jakiego morza lub oceanu ma dostęp ten kraj?
   wartosc: morze
   odpowiedzi:
-    - Ocean Atlantycki
-    - Morze Polnocne
-    - Morze Baltyckie
-    - Morze Srodziemne
+    Atlantyk: Ocean Atlantycki
+    Polnocne: Morze Polnocne
+    Baltyk: Morze Baltyckie
+    Srodziemne: Morze Srodziemne
 morze_e:
   pytanie: Do jakiego morza lub oceanu ma dostęp ten kraj?
   wartosc: morze
   odpowiedzi:
-    - Ocean Arktyczny
-    - Morze Baltyckie
-    - Morze Czarne
-    - Morze Kaspijskie
-    - Morze Barentsa
+    Arktyczny: Ocean Arktyczny
+    Baltyk: Morze Baltyckie
+    Czarne: Morze Czarne
+    Kaspijskie: Morze Kaspijskie
+    Barentsa: Morze Barentsa
 morze_s:
   pytanie: Do jakiego morza lub oceanu ma dostęp ten kraj?
   wartosc: morze
   odpowiedzi:
-    - Morze Czarne
-    - Morze Srodziemne
+    Czarne: Morze Czarne
+    Srodziemne: Morze Srodziemne
 euro:
   pytanie: Czy walutą tego państwa jest euro?
   wartosc: euro
   odpowiedzi:
-    - Tak
-    - Nie
+    T: Tak
+    N: Nie
 wladza:
   pytanie: Kto jest przywódcą tego kraju?
   wartosc: wladza
   odpowiedzi:
-    - Prezydent
-    - Monarcha
-    - Papiez
+    Prezydent: Prezydent
+    Monarcha: Monarcha
+    Papiez: Papiez
 samochody:
   pytanie: Czy kraj posiada własną markę samochodową?
   wartosc: samochody
   odpowiedzi:
-    - Tak
-    - Nie
+    T: Tak
+    N: Nie
 marka_samochodu_w:
   pytanie: Jaką markę?
   wartosc: marka_samochodu
   odpowiedzi:
-    - BMW
-    - Audi
-    - Mercedes
-    - Volkswagen
-    - Porsche
-    - Citroen
-    - Peugeot
-    - Seat
-    - Opel
-    - Vauxhall
-    - Bentley
-    - Rolls Royce
-    - Aston Martin
-    - Land Rover
-    - Nie wiem
+    BMW: BMW
+    Audi: Audi
+    Mercedes: Mercedes
+    VW: Volkswagen
+    Porsche: Porsche
+    Citroen: Citroen
+    Peugeot: Peugeot
+    Seat: Seat
+    Opel: Opel
+    Vauxhall: Vauxhall
+    Bentley: Bentley
+    RR: Rolls Royce
+    Aston: Aston Martin
+    Rover: Land Rover
+    NW: Nie wiem
  
 piwo_n:
   pytanie: Jaką markę piwa produkuje to państwo?
   wartosc: piwo
   odpowiedzi:
-    - Nie wiem
-    - Nils Oscar
-    - Sahti
-    - Vinbudin
-    - Lysholmer
+    NW: Nie wiem
+    Nils: Nils Oscar
+    Sahti: Sahti
+    Vinbudin: Vinbudin
+    Lysholmer: Lysholmer
 
 piwo_s:
   pytanie: Jaką markę piwa produkuje to państwo?
   wartosc: piwo
   odpowiedzi:
-    - Nie wiem
-    - Peroni
-    - Zorbas
-    - Keo
-    - Lasko
-    - Jelen
-    - Nektar
-    - Szumensko
+    NW: Nie wiem
+    Peroni: Peroni
+    Zorbas: Zorbas
+    Keo: Keo
+    Lasko: Lasko
+    Jelen: Jelen
+    Nektar: Nektar
+    Szumensko: Szumensko
 
 piwo_w:
   pytanie: Jaką markę piwa produkuje to państwo?
   wartosc: piwo
   odpowiedzi:
-    - Nie wiem
-    - Paulaner
-    - Duvel
-    - Grolsch
-    - Stiegl
-    - Zipfer
+    NW: Nie wiem
+    Paulaner: Paulaner
+    Duvel: Duvel
+    Grolsch: Grolsch
+    Stiegl: Stiegl
+    Zipfer: Zipfer
+    Guinness: Guinness
 
 piwo_e:
   pytanie: Jaką markę piwa produkuje to państwo?
   wartosc: piwo
   odpowiedzi:
-    - Nie wiem
-    - Vodka
-    - Tyskie
-    - Tuborg
-    - Staropramen
-    - Zlaty Bazant
+    NW: Nie wiem
+    Vodka: Vodka
+    Tyskie: Tyskie
+    Tuborg: Tuborg
+    Staropramen: Staropramen
+    ZB: Zlaty Bazant
 
 szwecja:
   pytanie: Czy w tym kraju obowiązuje częściowa prohibicja?
   wartosc: szwecja
   odpowiedzi:
-    - Tak
-    - Nie
+    T: Tak
+    N: Nie
 
 czy_wodka:
   pytanie: Czy w tym państwie jest produkowana wódka o takiej samej nazwie jak nazwa państwa?
   wartosc: czy_wodka
   odpowiedzi:
-    - Tak
-    - Nie
+    T: Tak
+    N: Nie
 
 balkanskie:
   pytanie: Czy jest to panstwo balkanskie?
   wartosc: balkanskie
   odpowiedzi:
-    - Tak
-    - Nie
+    T: Tak
+    N: Nie
 
 grecja:
   pytanie: Czy jest to państwo Hellenów?
   wartosc: grecja
   odpowiedzi:
-    - Tak
-    - Nie
+    T: Tak
+    N: Nie
 
 turcja:
   pytanie: Czy stolicą tego państwa było kiedyś Bizancjum?
   wartosc: turcja
   odpowiedzi:
-    - Tak
-    - Nie
+    T: Tak
+    N: Nie
 
 stolica_balkany:
   pytanie: Stolicą tego państwa jest
   wartosc: stolica
   odpowiedzi:
-    - Sofia
-    - Bukareszt
-    - Belgrad
-    - Sarajewo
-    - Tirana
-    - Zagrzeb
-    - Podgorica
-    - Skopje
-    - Prisztina
-    - Lublana
+    Sofia: Sofia
+    Bukareszt: Bukareszt
+    Belgrad: Belgrad
+    Sarajewo: Sarajewo
+    Tirana: Tirana
+    Zagrzeb: Zagrzeb
+    Podgorica: Podgorica
+    Skopje: Skopje
+    Prisztina: Prisztina
+    Lublana: Lublana
