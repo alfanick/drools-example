@@ -5,7 +5,7 @@
 *.jar
 *.war
 *.ear
-
+*.log
 build
 drools
 .project
