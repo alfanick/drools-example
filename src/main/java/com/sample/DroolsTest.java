@@ -37,8 +37,11 @@ public class DroolsTest {
 
     private static KnowledgeBase readKnowledgeBase() throws Exception {
         KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
+        System.out.println("1");
         kbuilder.add(ResourceFactory.newClassPathResource("pytania.drl"), ResourceType.DRL);
+        System.out.println("2");
         kbuilder.add(ResourceFactory.newClassPathResource("wiedza.drl"), ResourceType.DRL);
+        System.out.println("3");
         KnowledgeBuilderErrors errors = kbuilder.getErrors();
         if (errors.size() > 0) {
             for (KnowledgeBuilderError error: errors) {
@@ -52,7 +55,3 @@ public class DroolsTest {
     }
 
 }
-
-/*
-testowy komentarz 
-*/

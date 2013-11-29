@@ -1,0 +1,561 @@
+//created on: 2013-11-22
+package rules
+
+//list any import classes here.
+import com.sample.DroolsTest.*
+
+
+//declare any global variables here
+import pl.put.poznan.*;
+
+rule "Znamy Odpowiedz"
+        salience 10001
+        when
+                $fakt : Fakt(klucz=="panstwo", $panstwo : tekst)
+        then
+                if (Fakt.upewnij_sie($panstwo)) {
+                        Fakt.oglos($panstwo);
+                        drools.halt();
+                } else {
+                        retract($fakt);
+                }
+end
+
+rule "Albania"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="stolica", tekst=="Tirana")
+        then
+                insert(new Fakt("panstwo", "Albania"));
+end
+
+rule "Andora"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Zachod")
+                Fakt(klucz=="wladza", tekst=="Monarcha")
+                Fakt(klucz=="euro", prawda)
+        then
+                insert(new Fakt("panstwo", "Andora"));
+end
+
+rule "Austria"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Zachod")
+                Fakt(klucz=="euro", prawda)
+                
+                Fakt(klucz=="piwo", tekst in ("Stiegl", "Zipfer"))
+        then
+                insert(new Fakt("panstwo", "Austria"));
+end
+
+rule "Belgia"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Zachod")
+                Fakt(klucz=="wladza", tekst=="Monarcha")
+                Fakt(klucz=="euro", prawda)
+                Fakt(klucz=="piwo", tekst=="Duvel")
+        then
+                insert(new Fakt("panstwo", "Belgia"));
+end
+
+rule "Bialorus"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Wschod")
+        then
+                insert(new Fakt("panstwo", "Bialorus"));
+end
+
+rule "Bosnia i Hercegowina"
+        no-loop
+        salience 10000
+        when
+                (or
+                        Fakt(klucz=="piwo", tekst=="Nektar")
+                        Fakt(klucz=="stolica", tekst=="Sarajewo")
+                )
+        then
+                insert(new Fakt("panstwo", "Bosnia i Hercegowina"));
+end
+
+rule "Bulgaria"
+        no-loop
+        salience 10000
+        when
+                (or
+                        Fakt(klucz=="piwo", tekst=="Szumensko")
+                        Fakt(klucz=="stolica", tekst=="Sofia")
+                )
+        then
+                insert(new Fakt("panstwo", "Bulgaria"));
+end
+
+rule "Chorwacja"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="stolica", tekst=="Zagrzeb")
+        then
+                insert(new Fakt("panstwo", "Chorwacja"));
+end
+
+rule "Czarnogora"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="stolica", tekst=="Podgorica")
+        then
+                insert(new Fakt("panstwo", "Czarnogora"));
+end
+
+rule "Czechy"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Wschod")
+                Fakt(klucz=="piwo", tekst=="Staropramen")
+        then
+                insert(new Fakt("panstwo", "Czechy"));
+end
+
+rule "Cypr"
+        no-loop
+        salience 10000
+        when
+                (or
+                        (and
+                                Fakt(klucz=="polozenie", tekst=="Poludnie")
+                                Fakt(klucz=="wyspiarski", prawda)
+                        )
+                        Fakt(klucz=="piwo", tekst=="Keo")
+                )
+        then
+                insert(new Fakt("panstwo", "Cypr"));
+end
+
+rule "Dania"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Zachod")
+                Fakt(klucz=="wladza", tekst=="Monarcha")
+                Fakt(klucz=="piwo", tekst=="Tuborg")
+        then
+                insert(new Fakt("panstwo", "Dania"));
+end
+
+rule "Estonia"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Wschod")
+                Fakt(klucz=="euro", prawda)
+        then
+                insert(new Fakt("panstwo", "Estonia"));
+end
+
+rule "Finlandia"
+        no-loop
+        salience 10000
+        when
+                (or
+                        Fakt(klucz=="czy_wodka", prawda)
+                        Fakt(klucz=="piwo", tekst=="Sahti")
+                )
+        then
+                insert(new Fakt("panstwo", "Finlandia"));
+end
+
+rule "Francja"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Zachod")
+                Fakt(klucz=="euro", prawda)
+                Fakt(klucz=="samochody", prawda)
+                Fakt(klucz=="marka_samochodu", tekst in ("Citroen", "Peugeot"))
+        then
+                insert(new Fakt("panstwo", "Francja"));
+end
+
+rule "Grecja"
+        no-loop
+        salience 10000
+        when
+                (or
+                        Fakt(klucz=="grecja", prawda)
+                        Fakt(klucz=="piwo", tekst=="Zorbas")
+                )
+        then
+                insert(new Fakt("panstwo", "Grecja"));
+end
+
+rule "Hiszpania"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="marka_samochodu", tekst == "Seat")
+        then
+                insert(new Fakt("panstwo", "Hiszpania"));
+end
+
+rule "Holandia"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Zachod")
+                Fakt(klucz=="wladza", tekst=="Monarcha")
+                Fakt(klucz=="euro", prawda)
+                Fakt(klucz=="piwo", tekst=="Grolsch")
+        then
+                insert(new Fakt("panstwo", "Holandia"));
+end
+
+rule "Irlandia"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Zachod")
+                Fakt(klucz=="wyspiarski", prawda)
+                Fakt(klucz=="wladza", tekst=="Monarcha")
+                Fakt(klucz=="euro", prawda)
+        then
+                insert(new Fakt("panstwo", "Irlandia"));
+end
+
+rule "Islandia"
+        no-loop
+        salience 20000
+        when
+                (or
+                        (and
+                                Fakt(klucz=="polozenie", tekst=="Polnoc")
+                                Fakt(klucz=="wyspiarski", prawda)
+                        )
+                        Fakt(klucz=="piwo", tekst=="Vinbudin")
+                )
+        then
+                insert(new Fakt("panstwo", "Islandia"));
+end
+
+rule "Kosowo"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Poludnie")
+                Fakt(klucz=="stolica", tekst=="Prisztina")
+        then
+                insert(new Fakt("panstwo", "Kosowo"));
+end
+rule "Kazachstan"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Wschod")
+        then
+                insert(new Fakt("panstwo", "Kazachstan"));
+end
+
+rule "Liechtenstein"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Zachod")
+                Fakt(klucz=="wladza", tekst=="Monarcha")
+        then
+                insert(new Fakt("panstwo", "Liechtenstein"));
+end
+
+rule "Litwa"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Wschod")
+        then
+                insert(new Fakt("panstwo", "Litwa"));
+end
+
+rule "Luksemburg"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Zachod")
+                Fakt(klucz=="wladza", tekst=="Monarcha")
+                Fakt(klucz=="euro", prawda)
+        then
+                insert(new Fakt("panstwo", "Luksemburg"));
+end
+
+rule "Lotwa"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Wschod")
+        then
+                insert(new Fakt("panstwo", "Lotwa"));
+end
+
+rule "Macedonia"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Poludnie")
+                Fakt(klucz=="stolica", tekst=="Skopje")
+        then
+                insert(new Fakt("panstwo", "Macedonia"));
+end
+
+rule "Malta"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Poludnie")
+                Fakt(klucz=="euro", prawda)
+                Fakt(klucz=="wyspiarski", prawda)
+        then
+                insert(new Fakt("panstwo", "Malta"));
+end
+
+rule "Moldawia"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Wschod")
+        then
+                insert(new Fakt("panstwo", "Moldawia"));
+end
+
+rule "Monako"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Poludnie")
+                Fakt(klucz=="wladza", tekst=="Monarcha")
+                Fakt(klucz=="euro", prawda)
+        then
+                insert(new Fakt("panstwo", "Monako"));
+end
+
+rule "Niemcy"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Zachod")
+                Fakt(klucz=="euro", prawda)
+                (or
+                        (and
+                                Fakt(klucz=="samochody", prawda)
+                                Fakt(klucz=="marka_samochodu", tekst in ("Opel", "BMW", "Audi", "Mercedes", "Porsche", "VW"))
+                        )
+                        Fakt(klucz=="piwo", tekst=="Paulaner")
+                )
+        then
+                insert(new Fakt("panstwo", "Niemcy"));
+end
+
+rule "Norwegia"
+        no-loop
+        salience 10000
+        when
+                (or
+                        (and
+                                Fakt(klucz=="polozenie", tekst=="Polnoc")
+                                Fakt(klucz=="wladza", tekst=="Monarcha")
+                        )
+                        Fakt(klucz=="piwo", tekst=="Lysholmer")
+                )
+        then
+                insert(new Fakt("panstwo", "Norwegia"));
+end
+
+rule "Polska"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Wschod")
+                Fakt(klucz=="piwo", tekst=="Tyskie")
+        then
+                insert(new Fakt("panstwo", "Polska"));
+end
+
+rule "Portugalia"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Zachod")
+                Fakt(klucz=="euro", prawda)
+        then
+                insert(new Fakt("panstwo", "Portugalia"));
+end
+
+rule "Rosja"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Wschod")
+                (or
+                        Fakt(klucz=="samochody", prawda)
+                        Fakt(klucz=="piwo", tekst=="Vodka")
+                )
+        then
+                insert(new Fakt("panstwo", "Rosja"));
+end
+
+rule "Rumunia"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Wschod")
+                Fakt(klucz=="stolica", tekst=="Bukareszt")
+        then
+                insert(new Fakt("panstwo", "Rumunia"));
+end
+
+rule "San Marino"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Poludnie")
+                Fakt(klucz=="euro", prawda)
+        then
+                insert(new Fakt("panstwo", "San Marino"));
+end
+
+rule "Serbia"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Poludnie")
+                (or
+                        Fakt(klucz=="piwo", tekst=="Jelen")
+                        Fakt(klucz=="stolica", tekst=="Belgrad")
+                )
+        then
+                insert(new Fakt("panstwo", "Serbia"));
+end
+
+rule "Slowacja"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Wschod")
+                Fakt(klucz=="euro", prawda)
+                Fakt(klucz=="piwo", tekst=="ZB")
+        then
+                insert(new Fakt("panstwo", "Slowacja"));
+end
+
+rule "Slowenia"
+        no-loop
+        salience 10000
+        when
+                (or
+                        Fakt(klucz=="piwo", tekst=="Lasko")
+                        Fakt(klucz=="stolica", tekst=="Lublana")
+                )
+        then
+                insert(new Fakt("panstwo", "Slowenia"));
+end
+
+rule "Szwajcaria"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Zachod")
+        then
+                insert(new Fakt("panstwo", "Szwajcaria"));
+end
+
+rule "Szwecja"
+        no-loop
+        salience 10000
+        when
+                (or
+                        (and
+                                Fakt(klucz=="polozenie", tekst=="Polnoc")
+                                Fakt(klucz=="samochody", prawda)
+                        )
+                        Fakt(klucz=="szwecja", prawda)
+                        Fakt(klucz=="piwo", tekst=="Nils Oscar")
+                )
+        then
+                insert(new Fakt("panstwo", "Szwecja"));
+end
+
+rule "Turcja"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Poludnie")
+                Fakt(klucz=="trucja", prawda)
+        then
+                insert(new Fakt("panstwo", "Turcja"));
+end
+
+rule "Ukraina"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Wschod")
+        then
+                insert(new Fakt("panstwo", "Ukraina"));
+end
+
+rule "Watykan"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="wladza", tekst=="Papiez")
+        then
+                insert(new Fakt("panstwo", "Watykan"));
+end
+
+rule "Wegry"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Wschod")
+        then
+                insert(new Fakt("panstwo", "Wegry"));
+end
+
+rule "Wielka Brytania"
+        no-loop
+        salience 10000
+        when
+                Fakt(klucz=="polozenie", tekst=="Zachod")
+                Fakt(klucz=="wladza", tekst=="Monarcha")
+                Fakt(klucz=="wyspiarski", prawda)
+                (or
+                        Fakt(klucz=="piwo", tekst=="Guinness")
+                        (and
+                                Fakt(klucz=="samochody", prawda)
+                                Fakt(klucz=="marka_samochodu", tekst in ("Vauxhall", "Bentley", "RR", "Aston", "Rover"))
+                        )
+                )
+        then
+                insert(new Fakt("panstwo", "Wielka Brytania"));
+end
+
+rule "Wlochy"
+        no-loop
+        salience 10000
+        when
+                (or
+                        (and
+                                Fakt(klucz=="polozenie", tekst=="Poludnie")
+                                Fakt(klucz=="samochody", prawda)
+                        )
+                        Fakt(klucz=="piwo", tekst=="Peroni")
+                )
+        then
+                insert(new Fakt("panstwo", "Wlochy"));
+end
