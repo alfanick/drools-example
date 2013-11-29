@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CountryGuessining" basedir="." default="main">
+  <property name="src.dir" value="src" />
+  <property name="lib.dir" value="lib/" />
+  <property name="build.dir" value="build" />
+  <property name="classes.dir" value="${build.dir}/classes" />
+  <property name="jar.dir" value="${build.dir}/jar" />
+  <property name="main-class" value="com.sample.DroolsTest" />
+  <path id="classpath">
+    <fileset dir="${lib.dir}">
+      <include name="*.jar" />
+      <include name="drools/*.jar" />
+    </fileset>
+  </path>
+  <target name="clean">
+    <delete dir="${build.dir}" />
+  </target>
+  <target name="compile">
+    <mkdir dir="${classes.dir}" />
+    <javac srcdir="${src.dir}" destdir="${classes.dir}">
+      <classpath refid="classpath" />
+    </javac>
+  </target>
+  <target name="jar" depends="compile">
+    <mkdir dir="${jar.dir}" />
+    <jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}">
+      <fileset dir="${src.dir}/main/rules">
+        <include name="**/*.drl" />
+      </fileset>
+      <metainf dir="" includes="*.conf" />
+      <fileset dir="rsc/" >
+        <include name="*.yaml" />
+      </fileset>
+      <zipfileset excludes="META-INF/**/*" src="lib/org.eclipse.jdt.core_3.9.1.v20130905-0837.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/snakeyaml-1.13.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/antlr-runtime.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/drools-compiler.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/drools-core.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/drools-decisiontables.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/drools-jsr94.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/drools-templates.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/droolsjbpm-ide-common.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/guvnor-api.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/jbpm-bpmn2.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/jbpm-flow-builder.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/jbpm-flow.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/jsr94.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/junit.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/jxl.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/knowledge-api.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/knowledge-internal-api.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/mvel2.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/slf4j-api.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/xmlpull.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/xpp3_min.jar" />
+      <zipfileset excludes="META-INF/**/*" src="lib/drools/xstream.jar" />
+      <manifest>
+        <attribute name="Main-Class" value="${main-class}" />
+      </manifest>
+    </jar>
+  </target>
+  <target name="run" depends="jar">
+    <java jar="${jar.dir}/${ant.project.name}.jar" fork="true">
+      <classpath>
+        <path refid="classpath" />
+        <path location="${jar.dir}/${ant.project.name}.jar" />
+      </classpath>
+    </java>
+  </target>
+  <target name="clean-build" depends="clean,jar" />
+  <target name="main" depends="clean,run" />
+</project>

@@ -15,6 +15,7 @@ import org.drools.logger.KnowledgeRuntimeLogger;
 import org.drools.logger.KnowledgeRuntimeLoggerFactory;
 import org.drools.runtime.StatefulKnowledgeSession;
 import org.drools.runtime.StatelessKnowledgeSession;
+import java.net.URL;
 
 /**
  * This is a sample class to launch a rule.
@@ -28,7 +29,9 @@ public class DroolsTest {
             StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession();
             KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession, "test");
             // go !
+            System.out.println("pre");
             ksession.fireAllRules();
+            System.out.println("post");
             logger.close();
         } catch (Throwable t) {
             t.printStackTrace();
@@ -37,8 +40,10 @@ public class DroolsTest {
 
     private static KnowledgeBase readKnowledgeBase() throws Exception {
         KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
-        kbuilder.add(ResourceFactory.newClassPathResource("pytania.drl"), ResourceType.DRL);
-        kbuilder.add(ResourceFactory.newClassPathResource("wiedza.drl"), ResourceType.DRL);
+        System.out.println("pre rf");
+        kbuilder.add(ResourceFactory.newUrlResource(DroolsTest.class.getClassLoader().getResource("pytania.drl")), ResourceType.DRL);
+        kbuilder.add(ResourceFactory.newUrlResource(DroolsTest.class.getClassLoader().getResource("wiedza.drl")), ResourceType.DRL);
+        System.out.println("post rf");
         KnowledgeBuilderErrors errors = kbuilder.getErrors();
         if (errors.size() > 0) {
             for (KnowledgeBuilderError error: errors) {
@@ -54,5 +59,5 @@ public class DroolsTest {
 }
 
 /*
-testowy komentarz 
+testowy komentarz
 */

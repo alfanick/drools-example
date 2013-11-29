@@ -19,31 +19,31 @@ public class Pytanie {
   private String tresc;
   private String wartosc;
   private Map<String, String> odpowiedzi;
-  
+
   public Pytanie() {
-    
+
   }
-  
+
   public String getId() {
     return id;
   }
-  
+
   public void setId(String i) {
     id = i;
   }
-  
+
   public String getTresc() {
     return tresc;
   }
-  
+
   public void setTresc(String t) {
     tresc = t;
   }
- 
+
   public String getWartosc() {
     return wartosc;
   }
-  
+
   public void setWartosc(String w) {
     wartosc = w;
   }
@@ -51,11 +51,11 @@ public class Pytanie {
   public Map<String, String> getOdpowiedzi() {
     return odpowiedzi;
   }
-  
+
   public void setOdpowiedzi(Map<String, String> o) {
     odpowiedzi = o;
   }
-  
+
   public String getKeyByValue(String value) {
     for (Entry<String, String> entry : odpowiedzi.entrySet()) {
         if (value.equalsIgnoreCase(entry.getValue())) {
@@ -64,15 +64,15 @@ public class Pytanie {
     }
     return null;
 }
-  
+
   public static Fakt zadaj(String id) {
     Pytanie pytanie = Pytanie.baza().get(id);
-    
+
     if (pytanie != null) {
       Object odpowiedz;
-      
+
       do {
-        odpowiedz = (Object)JOptionPane.showInputDialog(null, 
+        odpowiedz = (Object)JOptionPane.showInputDialog(null,
             pytanie.getTresc(),
             id,
             JOptionPane.QUESTION_MESSAGE,
@@ -80,7 +80,7 @@ public class Pytanie {
             pytanie.getOdpowiedzi().values().toArray(),
             pytanie.getOdpowiedzi().get(0));
       } while (odpowiedz == null);
-      
+
       // zalozmy ze to liczba
       if (odpowiedz instanceof Double) {
         return new Fakt(pytanie.wartosc, ((Double)odpowiedz).floatValue());
@@ -102,11 +102,11 @@ public class Pytanie {
       }
     } else {
       JOptionPane.showMessageDialog(null, "Pytanie o ID '"+id+"' nie istnieje!");
-      
+
       return null;
     }
   }
-  
+
   private static HashMap<String, Pytanie> zawartosc = new HashMap<String, Pytanie>();
   @SuppressWarnings("unchecked")
   private static HashMap<String, Pytanie> baza() {
@@ -114,10 +114,9 @@ public class Pytanie {
       // wczytaj
       Yaml yaml = new Yaml();
       Map<String, Map<String, Object>> map;
-      try {
-        map = (Map<String, Map<String, Object>>)yaml.load((InputStream)(new FileInputStream(new File("rsc/pytania.yaml"))));
+        map = (Map<String, Map<String, Object>>)yaml.load((InputStream)(Pytanie.class.getResourceAsStream("/pytania.yaml")));
 
-        
+
         for (Map.Entry<String, Map<String, Object>> entry : map.entrySet()) {
           Pytanie pytanie = new Pytanie();
           pytanie.setId(entry.getKey());
@@ -127,12 +126,8 @@ public class Pytanie {
           System.out.println((Map<String, String>)(entry.getValue().get("odpowiedzi")));
           Pytanie.zawartosc.put(entry.getKey(), pytanie);
         }
-      } catch (FileNotFoundException e) {
-        // TODO Auto-generated catch block
-        e.printStackTrace();
-      }
     }
-    
+
     return zawartosc;
   }
 }

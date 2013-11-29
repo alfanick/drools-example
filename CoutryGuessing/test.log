@@ -50,7 +50,7 @@
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>1</factId>
-  <objectToString>pl.put.poznan.Fakt@76633855</objectToString>
+  <objectToString>pl.put.poznan.Fakt@1f9f200d</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
@@ -73,7 +73,7 @@
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>2</factId>
-  <objectToString>pl.put.poznan.Fakt@4c3d80e9</objectToString>
+  <objectToString>pl.put.poznan.Fakt@6e2e5dc9</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>4</type>
@@ -84,7 +84,7 @@
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>3</factId>
-  <objectToString>pl.put.poznan.Fakt@67994ea6</objectToString>
+  <objectToString>pl.put.poznan.Fakt@2ac2bc9b</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
@@ -102,12 +102,12 @@
   <type>4</type>
   <activationId>Znamy Odpowiedz [4]</activationId>
   <rule>Znamy Odpowiedz</rule>
-  <declarations>$panstwo=Islandia(4); $fakt=pl.put.poznan.Fakt@100a494b(4)</declarations>
+  <declarations>$panstwo=Islandia(4); $fakt=pl.put.poznan.Fakt@4829a3c2(4)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>4</factId>
-  <objectToString>pl.put.poznan.Fakt@100a494b</objectToString>
+  <objectToString>pl.put.poznan.Fakt@4829a3c2</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
@@ -119,12 +119,12 @@
   <type>6</type>
   <activationId>Znamy Odpowiedz [4]</activationId>
   <rule>Znamy Odpowiedz</rule>
-  <declarations>$panstwo=Islandia(4); $fakt=pl.put.poznan.Fakt@100a494b(4)</declarations>
+  <declarations>$panstwo=Islandia(4); $fakt=pl.put.poznan.Fakt@4829a3c2(4)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
   <activationId>Znamy Odpowiedz [4]</activationId>
   <rule>Znamy Odpowiedz</rule>
-  <declarations>$panstwo=Islandia(4); $fakt=pl.put.poznan.Fakt@100a494b(4)</declarations>
+  <declarations>$panstwo=Islandia(4); $fakt=pl.put.poznan.Fakt@4829a3c2(4)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 </object-stream>
