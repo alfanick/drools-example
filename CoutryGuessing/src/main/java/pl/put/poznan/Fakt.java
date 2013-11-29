@@ -23,7 +23,7 @@ public class Fakt {
   public Fakt(String p, boolean pd) {
     klucz = p;
     prawda = pd;
-    System.out.println("tworze boola");
+    System.out.println(pd?"tak":"nie");
   }
   
   public String getKlucz() {

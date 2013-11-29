@@ -25,6 +25,7 @@ rule "wyspiarski"
 		Fakt(klucz=="polozenie", tekst != "Europa wschodnia")
 	then
 		Fakt o = Pytanie.zadaj("wyspiarski");
+        insert(o);
         if (o.getPrawda())
         	insert(new Fakt("ma_morze", true));
 end
@@ -170,3 +171,4 @@ rule "stolica_balkany"
 	then
 		insert(Pytanie.zadaj("stolica_balkany"));
 end
+

@@ -55,7 +55,7 @@
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>3</factId>
-  <objectToString>pl.put.poznan.Fakt@4e5c3f7b</objectToString>
+  <objectToString>pl.put.poznan.Fakt@4b8e51d2</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
@@ -65,20 +65,65 @@
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
-  <activationId>wyspiarski [3]</activationId>
-  <rule>wyspiarski</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>4</type>
-  <activationId>morze_n [3, 4]</activationId>
-  <rule>morze_n</rule>
+  <activationId>samochody [1]</activationId>
+  <rule>samochody</rule>
   <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>4</factId>
-  <objectToString>pl.put.poznan.Fakt@4def3e66</objectToString>
+  <objectToString>pl.put.poznan.Fakt@4f7a8a38</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>samochody [1]</activationId>
+  <rule>samochody</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>euro [3]</activationId>
+  <rule>euro</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>5</factId>
+  <objectToString>pl.put.poznan.Fakt@b66b2f6</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>euro [3]</activationId>
+  <rule>euro</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>wyspiarski [3]</activationId>
+  <rule>wyspiarski</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>wladza [1]</activationId>
+  <rule>wladza</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>6</factId>
+  <objectToString>pl.put.poznan.Fakt@5d5a271e</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>morze_n [3, 7]</activationId>
+  <rule>morze_n</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>7</factId>
+  <objectToString>pl.put.poznan.Fakt@677784dd</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
@@ -88,83 +133,49 @@
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
-  <activationId>samochody [1]</activationId>
-  <rule>samochody</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ObjectLogEvent>
-  <type>1</type>
-  <factId>5</factId>
-  <objectToString>pl.put.poznan.Fakt@3e3155a8</objectToString>
-</org.drools.audit.event.ObjectLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>7</type>
-  <activationId>samochody [1]</activationId>
-  <rule>samochody</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>6</type>
-  <activationId>morze_n [3, 4]</activationId>
+  <activationId>morze_n [3, 7]</activationId>
   <rule>morze_n</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ObjectLogEvent>
-  <type>1</type>
-  <factId>6</factId>
-  <objectToString>pl.put.poznan.Fakt@7c7b1133</objectToString>
-</org.drools.audit.event.ObjectLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>7</type>
-  <activationId>morze_n [3, 4]</activationId>
-  <rule>morze_n</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>6</type>
-  <activationId>euro [3]</activationId>
-  <rule>euro</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ObjectLogEvent>
-  <type>1</type>
-  <factId>7</factId>
-  <objectToString>pl.put.poznan.Fakt@7c30a7b7</objectToString>
-</org.drools.audit.event.ObjectLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>7</type>
-  <activationId>euro [3]</activationId>
-  <rule>euro</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>6</type>
-  <activationId>piwo_n [3]</activationId>
-  <rule>piwo_n</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>7</type>
-  <activationId>piwo_n [3]</activationId>
-  <rule>piwo_n</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>6</type>
-  <activationId>czy_szwecja [3]</activationId>
-  <rule>czy_szwecja</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>4</type>
-  <activationId>Szwecja [8]</activationId>
-  <rule>Szwecja</rule>
   <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>8</factId>
-  <objectToString>pl.put.poznan.Fakt@7a6a5f35</objectToString>
+  <objectToString>pl.put.poznan.Fakt@5f3bb3ac</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>morze_n [3, 7]</activationId>
+  <rule>morze_n</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>piwo_n [3]</activationId>
+  <rule>piwo_n</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>piwo_n [3]</activationId>
+  <rule>piwo_n</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>czy_szwecja [3]</activationId>
+  <rule>czy_szwecja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Szwecja [9]</activationId>
+  <rule>Szwecja</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>9</factId>
+  <objectToString>pl.put.poznan.Fakt@183aeac3</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
@@ -174,59 +185,42 @@
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
-  <activationId>Szwecja [8]</activationId>
+  <activationId>Szwecja [9]</activationId>
   <rule>Szwecja</rule>
   <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>4</type>
-  <activationId>Znamy Odpowiedz [9]</activationId>
+  <activationId>Znamy Odpowiedz [10]</activationId>
   <rule>Znamy Odpowiedz</rule>
-  <declarations>$panstwo=Szwecja(9); $fakt=pl.put.poznan.Fakt@42704ab7(9)</declarations>
+  <declarations>$panstwo=Szwecja(10); $fakt=pl.put.poznan.Fakt@33f85208(10)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
-  <factId>9</factId>
-  <objectToString>pl.put.poznan.Fakt@42704ab7</objectToString>
+  <factId>10</factId>
+  <objectToString>pl.put.poznan.Fakt@33f85208</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
-  <activationId>Szwecja [8]</activationId>
+  <activationId>Szwecja [9]</activationId>
   <rule>Szwecja</rule>
   <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
-  <activationId>Znamy Odpowiedz [9]</activationId>
+  <activationId>Znamy Odpowiedz [10]</activationId>
   <rule>Znamy Odpowiedz</rule>
-  <declarations>$panstwo=Szwecja(9); $fakt=pl.put.poznan.Fakt@42704ab7(9)</declarations>
+  <declarations>$panstwo=Szwecja(10); $fakt=pl.put.poznan.Fakt@33f85208(10)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>3</type>
-  <factId>9</factId>
-  <objectToString>pl.put.poznan.Fakt@42704ab7</objectToString>
+  <factId>10</factId>
+  <objectToString>pl.put.poznan.Fakt@33f85208</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
   <activationId>Znamy Odpowiedz [-1]</activationId>
   <rule>Znamy Odpowiedz</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>6</type>
-  <activationId>wladza [1]</activationId>
-  <rule>wladza</rule>
-  <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ObjectLogEvent>
-  <type>1</type>
-  <factId>10</factId>
-  <objectToString>pl.put.poznan.Fakt@636c22cb</objectToString>
-</org.drools.audit.event.ObjectLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>7</type>
-  <activationId>wladza [1]</activationId>
-  <rule>wladza</rule>
   <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 </object-stream>
