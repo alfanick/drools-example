@@ -11,13 +11,18 @@ import pl.put.poznan.*;
 rule "Znamy Odpowiedz"
 	salience 10001
 	when
-		Fakt(klucz=="panstwo", $panstwo : tekst)
+		$fakt : Fakt(klucz=="panstwo", $panstwo : tekst)
 	then
-		Fakt.oglos($panstwo);
-		drools.halt();
+		if (Fakt.upewnij_sie($panstwo)) {
+			Fakt.oglos($panstwo);
+			drools.halt();
+		} else {
+			retract($fakt);
+		}
 end
 
 rule "Albania"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="stolica", tekst=="Tirana")
@@ -26,6 +31,7 @@ rule "Albania"
 end
 
 rule "Andora"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
@@ -36,6 +42,7 @@ rule "Andora"
 end
 
 rule "Austria"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
@@ -47,6 +54,7 @@ rule "Austria"
 end
 
 rule "Belgia"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
@@ -58,6 +66,7 @@ rule "Belgia"
 end
 
 rule "Bialorus"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
@@ -66,6 +75,7 @@ rule "Bialorus"
 end
 
 rule "Bosnia i Hercegowina"
+	no-loop
 	salience 10000
 	when
 		(or
@@ -77,6 +87,7 @@ rule "Bosnia i Hercegowina"
 end
 
 rule "Bulgaria"
+	no-loop
 	salience 10000
 	when
 		(or
@@ -88,6 +99,7 @@ rule "Bulgaria"
 end
 
 rule "Chorwacja"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="stolica", tekst=="Zagrzeb")
@@ -96,6 +108,7 @@ rule "Chorwacja"
 end
 
 rule "Czarnogora"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="stolica", tekst=="Podgorica")
@@ -104,6 +117,7 @@ rule "Czarnogora"
 end
 
 rule "Czechy"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
@@ -113,6 +127,7 @@ rule "Czechy"
 end
 
 rule "Cypr"
+	no-loop
 	salience 10000
 	when
 		(or
@@ -127,6 +142,7 @@ rule "Cypr"
 end
 
 rule "Dania"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
@@ -137,6 +153,7 @@ rule "Dania"
 end
 
 rule "Estonia"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
@@ -146,6 +163,7 @@ rule "Estonia"
 end
 
 rule "Finlandia"
+	no-loop
 	salience 10000
 	when
 		(or
@@ -157,6 +175,7 @@ rule "Finlandia"
 end
 
 rule "Francja"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
@@ -168,6 +187,7 @@ rule "Francja"
 end
 
 rule "Grecja"
+	no-loop
 	salience 10000
 	when
 		(or
@@ -179,6 +199,7 @@ rule "Grecja"
 end
 
 rule "Hiszpania"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="marka_samochodu", tekst == "Seat")
@@ -187,6 +208,7 @@ rule "Hiszpania"
 end
 
 rule "Holandia"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
@@ -198,6 +220,7 @@ rule "Holandia"
 end
 
 rule "Irlandia"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
@@ -209,6 +232,7 @@ rule "Irlandia"
 end
 
 rule "Islandia"
+	no-loop
 	salience 10000
 	when
 		(or
@@ -223,6 +247,7 @@ rule "Islandia"
 end
 
 rule "Kosowo"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
@@ -231,6 +256,7 @@ rule "Kosowo"
 		insert(new Fakt("panstwo", "Kosowo"));
 end
 rule "Kazachstan"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
@@ -239,6 +265,7 @@ rule "Kazachstan"
 end
 
 rule "Liechtenstein"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
@@ -248,6 +275,7 @@ rule "Liechtenstein"
 end
 
 rule "Litwa"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
@@ -256,6 +284,7 @@ rule "Litwa"
 end
 
 rule "Luksemburg"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
@@ -266,6 +295,7 @@ rule "Luksemburg"
 end
 
 rule "Lotwa"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
@@ -274,6 +304,7 @@ rule "Lotwa"
 end
 
 rule "Macedonia"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
@@ -283,6 +314,7 @@ rule "Macedonia"
 end
 
 rule "Malta"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
@@ -292,6 +324,7 @@ rule "Malta"
 end
 
 rule "Moldawia"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
@@ -300,6 +333,7 @@ rule "Moldawia"
 end
 
 rule "Monako"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
@@ -310,6 +344,7 @@ rule "Monako"
 end
 
 rule "Niemcy"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
@@ -326,6 +361,7 @@ rule "Niemcy"
 end
 
 rule "Norwegia"
+	no-loop
 	salience 10000
 	when
 		(or
@@ -340,6 +376,7 @@ rule "Norwegia"
 end
 
 rule "Polska"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
@@ -349,6 +386,7 @@ rule "Polska"
 end
 
 rule "Portugalia"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
@@ -358,6 +396,7 @@ rule "Portugalia"
 end
 
 rule "Rosja"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
@@ -368,6 +407,7 @@ rule "Rosja"
 end
 
 rule "Rumunia"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa wchodnia")
@@ -377,6 +417,7 @@ rule "Rumunia"
 end
 
 rule "San Marino"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
@@ -386,6 +427,7 @@ rule "San Marino"
 end
 
 rule "Serbia"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
@@ -398,6 +440,7 @@ rule "Serbia"
 end
 
 rule "Slowacja"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
@@ -408,6 +451,7 @@ rule "Slowacja"
 end
 
 rule "Slowenia"
+	no-loop
 	salience 10000
 	when
 		(or
@@ -419,6 +463,7 @@ rule "Slowenia"
 end
 
 rule "Szwajcaria"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
@@ -427,6 +472,7 @@ rule "Szwajcaria"
 end
 
 rule "Szwecja"
+	no-loop
 	salience 10000
 	when
 		(or
@@ -443,6 +489,7 @@ rule "Szwecja"
 end
 
 rule "Turcja"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa poludniowa")
@@ -452,6 +499,7 @@ rule "Turcja"
 end
 
 rule "Ukraina"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
@@ -460,6 +508,7 @@ rule "Ukraina"
 end
 
 rule "Watykan"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="wladza", tekst=="Papież")
@@ -468,6 +517,7 @@ rule "Watykan"
 end
 
 rule "Wegry"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa wschodnia")
@@ -476,6 +526,7 @@ rule "Wegry"
 end
 
 rule "Wielka Brytania"
+	no-loop
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Europa zachodnia")
@@ -487,6 +538,7 @@ rule "Wielka Brytania"
 end
 
 rule "Wlochy"
+	no-loop
 	salience 10000
 	when
 		(or

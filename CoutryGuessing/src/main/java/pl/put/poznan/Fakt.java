@@ -61,4 +61,8 @@ public class Fakt {
   public static void oglos(String s) {
     JOptionPane.showMessageDialog(null, s);
   }
+  
+  public static boolean upewnij_sie(String s) {
+    return JOptionPane.showConfirmDialog(null, "Czy jest to " + s + "?", s, JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION;
+  }
 }
