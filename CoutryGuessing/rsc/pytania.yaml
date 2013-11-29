@@ -97,7 +97,7 @@ piwo_n:
     - Nils Oscar
     - Sahti
     - Vinbudin
-    - Frydenlund
+    - Lysholmer
 
 piwo_s:
   pytanie: Jaką markę piwa produkuje to państwo?
@@ -105,10 +105,9 @@ piwo_s:
   odpowiedzi:
     - Nie wiem
     - Peroni
-    - Zobras
+    - Zorbas
     - Keo
     - Lasko
-    - Niksicko
     - Jelen
     - Nektar
     - Szumensko
@@ -119,6 +118,7 @@ piwo_w:
   odpowiedzi:
     - Nie wiem
     - Paulaner
+    - Duvel
     - Grolsch
     - Stiegl
     - Zipfer
@@ -128,19 +128,11 @@ piwo_e:
   wartosc: piwo
   odpowiedzi:
     - Nie wiem
-    - Vodka ;) -> Rosja ;p
+    - Vodka
     - Tyskie
     - Tuborg
     - Staropramen
     - Zlaty Bazant
-    - Martiner
- 
-islandia:
-  pytanie: Czy występują tam gejzery, wulkany, lód i słońce?
-  wartosc: islandia
-  odpowiedzi:
-    - Tak
-    - Nie
 
 szwecja:
   pytanie: Czy w tym kraju obowiązuje częściowa prohibicja?
@@ -189,5 +181,5 @@ stolica_balkany:
     - Zagrzeb
     - Podgorica
     - Skopje
-    - Prisztyna
+    - Prisztina
     - Lublana

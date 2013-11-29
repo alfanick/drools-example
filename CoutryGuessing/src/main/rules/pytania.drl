@@ -48,13 +48,6 @@ rule "samochody"
 		insert(Pytanie.zadaj("samochody"));
 end
 
-rule "czy_islandia"
-	when
-		Fakt(klucz=="polozenie", tekst == "Europa polnocna")
-	then
-		insert(Pytanie.zadaj("islandia"));
-end
-
 rule "czy_szwecja"
 	when
 		Fakt(klucz=="polozenie", tekst == "Europa polnocna")
