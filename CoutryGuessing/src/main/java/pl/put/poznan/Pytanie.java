@@ -86,7 +86,8 @@ public class Pytanie {
         return new Fakt(pytanie.wartosc, ((Double)odpowiedz).floatValue());
       } else {
         String key = pytanie.getKeyByValue((String) odpowiedz);
-        
+
+        System.out.println(key);
         if (key.equalsIgnoreCase("t")) {
           return new Fakt(pytanie.wartosc, true);
         } else
@@ -96,7 +97,7 @@ public class Pytanie {
         if (key.equalsIgnoreCase("nw")) {
           return null;
         } else {
-          return new Fakt(pytanie.wartosc, (String) odpowiedz);
+          return new Fakt(pytanie.wartosc, key);
         }
       }
     } else {
@@ -123,7 +124,7 @@ public class Pytanie {
           pytanie.setWartosc((String)(entry.getValue().get("wartosc")));
           pytanie.setTresc((String)(entry.getValue().get("pytanie")));
           pytanie.setOdpowiedzi((Map<String, String>)(entry.getValue().get("odpowiedzi")));
-          
+          System.out.println((Map<String, String>)(entry.getValue().get("odpowiedzi")));
           Pytanie.zawartosc.put(entry.getKey(), pytanie);
         }
       } catch (FileNotFoundException e) {

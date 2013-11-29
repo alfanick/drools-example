@@ -233,7 +233,7 @@ end
 
 rule "Islandia"
 	no-loop
-	salience 10000
+	salience 20000
 	when
 		(or
 			(and
@@ -319,6 +319,7 @@ rule "Malta"
 	when
 		Fakt(klucz=="polozenie", tekst=="Poludnie")
 		Fakt(klucz=="euro", prawda)
+		Fakt(klucz=="wyspiarski", prawda)
 	then
 		insert(new Fakt("panstwo", "Malta"));
 end
