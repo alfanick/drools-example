@@ -20,7 +20,7 @@ rule "start"
 end
 
 rule "wyspiarski"
-        salience 100
+        salience 1000
         when
                 Fakt(klucz=="polozenie", tekst != "Wschod")
         then
@@ -30,11 +30,14 @@ rule "wyspiarski"
                 insert(new Fakt("ma_morze", true));
 end
 
+
 rule "wladza"
         when
         then
                 insert(Pytanie.zadaj("wladza"));
 end
+
+
 
 rule "euro"
         when
@@ -42,12 +45,18 @@ rule "euro"
                 insert(Pytanie.zadaj("euro"));
 end
 
+
+
 rule "samochody"
         salience 100
         when
+        	
+        		Fakt(klucz=="piwo", tekst=="NIEWIEM")
+        		
         then
                 insert(Pytanie.zadaj("samochody"));
 end
+
 
 rule "czy_szwecja"
         when
@@ -55,6 +64,7 @@ rule "czy_szwecja"
         then
                 insert(Pytanie.zadaj("szwecja"));
 end
+
 
 rule "czy_wodka"
         when
@@ -64,6 +74,7 @@ rule "czy_wodka"
                 insert(Pytanie.zadaj("czy_wodka"));
 end
 
+
 rule "marka_samochodu_w"
         when
                 Fakt(klucz=="polozenie", tekst == "Zachod")
@@ -72,6 +83,7 @@ rule "marka_samochodu_w"
                 insert(Pytanie.zadaj("marka_samochodu_w"));
 end
 
+
 rule "ma_morze"
         when
                 Fakt(klucz=="wyspiarski", !prawda) or
@@ -79,7 +91,8 @@ rule "ma_morze"
         then
                 insert(Pytanie.zadaj("ma_morze"));
 end
-                
+ 
+               
 rule "morze_n"
         when
                 Fakt(klucz=="ma_morze", prawda)
@@ -87,7 +100,8 @@ rule "morze_n"
         then
                 insert(Pytanie.zadaj("morze_n"));
 end
-                
+ 
+            
 rule "morze_w"
         when
                 Fakt(klucz=="ma_morze", prawda)
@@ -95,7 +109,8 @@ rule "morze_w"
         then
                 insert(Pytanie.zadaj("morze_w"));
 end
-                
+    
+         
 rule "morze_e"
         when
                 Fakt(klucz=="ma_morze", prawda)
@@ -103,7 +118,8 @@ rule "morze_e"
         then
                 insert(Pytanie.zadaj("morze_e"));
 end
-                
+
+               
 rule "morze_s"
         when
                 Fakt(klucz=="ma_morze", prawda)
@@ -112,40 +128,68 @@ rule "morze_s"
                 insert(Pytanie.zadaj("morze_s"));
 end
 
+
 rule "piwo_n"
         when
                 Fakt(klucz=="polozenie", tekst=="Polnoc")
+                (or
+        			Fakt(klucz=="samochody", !prawda)
+        			Fakt(klucz=="marka_samochodu", tekst=="NIEWIEM")
+        		)
         then
                 insert(Pytanie.zadaj("piwo_n"));
 end
 
+
 rule "piwo_s"
         when
                 Fakt(klucz=="polozenie", tekst=="Poludnie")
+                (or
+        			Fakt(klucz=="samochody", !prawda)
+        			Fakt(klucz=="marka_samochodu", tekst=="NIEWIEM")
+        		)
         then
                 insert(Pytanie.zadaj("piwo_s"));
 end
 
+
 rule "piwo_e"
         when
                 Fakt(klucz=="polozenie", tekst=="Wschod")
+                (or
+        			Fakt(klucz=="samochody", !prawda)
+        			Fakt(klucz=="marka_samochodu", tekst=="NIEWIEM")
+        		)
         then
                 insert(Pytanie.zadaj("piwo_e"));
 end
 
+
 rule "piwo_w"
         when
                 Fakt(klucz=="polozenie", tekst=="Zachod")
+                (or
+        			Fakt(klucz=="samochody", !prawda)
+        			Fakt(klucz=="marka_samochodu", tekst=="NIEWIEM")
+        		)
         then
                 insert(Pytanie.zadaj("piwo_w"));
 end
 
+
 rule "balkanskie"
+		salience 200
         when
                 Fakt(klucz=="polozenie", tekst=="Poludnie")
+                (or
+        			Fakt(klucz=="samochody", !prawda)
+        			Fakt(klucz=="marka_samochodu", tekst=="NIEWIEM")
+        			Fakt(klucz=="piwo", tekst=="NIEWIEM")
+        		)
         then
                 insert(Pytanie.zadaj("balkanskie"));
 end
+
 
 rule "czy_grecja"
         salience 100
@@ -155,6 +199,7 @@ rule "czy_grecja"
                 insert(Pytanie.zadaj("grecja"));
 end
 
+
 rule "czy_turcja"
         salience 99
         when
@@ -162,6 +207,7 @@ rule "czy_turcja"
         then
                 insert(Pytanie.zadaj("turcja"));
 end
+
 
 rule "stolica_balkany"
         salience 10

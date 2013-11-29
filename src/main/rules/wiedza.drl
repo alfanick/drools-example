@@ -30,7 +30,7 @@ rule "Albania"
                 insert(new Fakt("panstwo", "Albania"));
 end
 
-rule "Andora"
+rule "Andora"	//something iswrong
         no-loop
         salience 10000
         when
@@ -61,6 +61,7 @@ rule "Belgia"
                 Fakt(klucz=="wladza", tekst=="Monarcha")
                 Fakt(klucz=="euro", prawda)
                 Fakt(klucz=="piwo", tekst=="Duvel")
+                Fakt(klucz=="morze", tekst=="Polnocne")
         then
                 insert(new Fakt("panstwo", "Belgia"));
 end
@@ -390,6 +391,7 @@ rule "Portugalia"
         no-loop
         salience 10000
         when
+        		Fakt(klucz=="piwo", tekst=="Nie wiem")
                 Fakt(klucz=="polozenie", tekst=="Zachod")
                 Fakt(klucz=="euro", prawda)
         then

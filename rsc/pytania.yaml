@@ -87,13 +87,13 @@ marka_samochodu_w:
     RR: Rolls Royce
     Aston: Aston Martin
     Rover: Land Rover
-    NW: Nie wiem
+    NIEWIEM: Nie wiem
 
 piwo_n:
   pytanie: Jaką markę piwa produkuje to państwo?
   wartosc: piwo
   odpowiedzi:
-    NW: Nie wiem
+    NIEWIEM: Nie wiem
     Nils: Nils Oscar
     Sahti: Sahti
     Vinbudin: Vinbudin
@@ -103,7 +103,7 @@ piwo_s:
   pytanie: Jaką markę piwa produkuje to państwo?
   wartosc: piwo
   odpowiedzi:
-    NW: Nie wiem
+    NIEWIEM: Nie wiem
     Peroni: Peroni
     Zorbas: Zorbas
     Keo: Keo
@@ -116,7 +116,7 @@ piwo_w:
   pytanie: Jaką markę piwa produkuje to państwo?
   wartosc: piwo
   odpowiedzi:
-    NW: Nie wiem
+    NIEWIEM: Nie wiem
     Paulaner: Paulaner
     Duvel: Duvel
     Grolsch: Grolsch
@@ -128,7 +128,7 @@ piwo_e:
   pytanie: Jaką markę piwa produkuje to państwo?
   wartosc: piwo
   odpowiedzi:
-    NW: Nie wiem
+    NIEWIEM: Nie wiem
     Vodka: Vodka
     Tyskie: Tyskie
     Tuborg: Tuborg
