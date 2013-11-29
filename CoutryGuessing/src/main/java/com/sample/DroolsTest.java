@@ -52,3 +52,7 @@ public class DroolsTest {
     }
 
 }
+
+/*
+testowy komentarz 
+*/
