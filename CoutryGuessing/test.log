@@ -25,6 +25,12 @@
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>4</type>
+  <activationId>Szwajcaria [1]</activationId>
+  <rule>Szwajcaria</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
   <activationId>wyspiarski [1]</activationId>
   <rule>wyspiarski</rule>
   <declarations></declarations>
@@ -32,7 +38,7 @@
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>1</factId>
-  <objectToString>pl.put.poznan.Fakt@21854716</objectToString>
+  <objectToString>pl.put.poznan.Fakt@15369fae</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
@@ -42,25 +48,59 @@
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
-  <activationId>wyspiarski [1]</activationId>
-  <rule>wyspiarski</rule>
+  <activationId>Szwajcaria [1]</activationId>
+  <rule>Szwajcaria</rule>
   <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>4</type>
-  <activationId>Islandia [2, 1]</activationId>
-  <rule>Islandia</rule>
-  <declarations></declarations>
+  <activationId>Znamy Odpowiedz [2]</activationId>
+  <rule>Znamy Odpowiedz</rule>
+  <declarations>$panstwo=Szwajcaria(2); $fakt=pl.put.poznan.Fakt@1e46ca3d(2)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>2</factId>
-  <objectToString>pl.put.poznan.Fakt@4e2123f8</objectToString>
+  <objectToString>pl.put.poznan.Fakt@1e46ca3d</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Szwajcaria [1]</activationId>
+  <rule>Szwajcaria</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Znamy Odpowiedz [2]</activationId>
+  <rule>Znamy Odpowiedz</rule>
+  <declarations>$panstwo=Szwajcaria(2); $fakt=pl.put.poznan.Fakt@1e46ca3d(2)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>2</factId>
+  <objectToString>pl.put.poznan.Fakt@1e46ca3d</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Znamy Odpowiedz [-1]</activationId>
+  <rule>Znamy Odpowiedz</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>wyspiarski [1]</activationId>
+  <rule>wyspiarski</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>3</factId>
-  <objectToString>pl.put.poznan.Fakt@3a23fcd2</objectToString>
+  <objectToString>pl.put.poznan.Fakt@3dd2bda7</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>4</factId>
+  <objectToString>pl.put.poznan.Fakt@302e3705</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
@@ -70,37 +110,82 @@
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
-  <activationId>Islandia [2, 1]</activationId>
-  <rule>Islandia</rule>
+  <activationId>samochody [0]</activationId>
+  <rule>samochody</rule>
   <declarations></declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>4</type>
-  <activationId>Znamy Odpowiedz [4]</activationId>
-  <rule>Znamy Odpowiedz</rule>
-  <declarations>$panstwo=Islandia(4); $fakt=pl.put.poznan.Fakt@b2c3415(4)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
-  <factId>4</factId>
-  <objectToString>pl.put.poznan.Fakt@b2c3415</objectToString>
+  <factId>5</factId>
+  <objectToString>pl.put.poznan.Fakt@2e3a87f5</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
-  <activationId>Islandia [2, 1]</activationId>
-  <rule>Islandia</rule>
+  <activationId>samochody [0]</activationId>
+  <rule>samochody</rule>
   <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
-  <activationId>Znamy Odpowiedz [4]</activationId>
-  <rule>Znamy Odpowiedz</rule>
-  <declarations>$panstwo=Islandia(4); $fakt=pl.put.poznan.Fakt@b2c3415(4)</declarations>
+  <activationId>wladza [0]</activationId>
+  <rule>wladza</rule>
+  <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Liechtenstein [6, 1]</activationId>
+  <rule>Liechtenstein</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>6</factId>
+  <objectToString>pl.put.poznan.Fakt@41bdecd8</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
-  <activationId>Znamy Odpowiedz [4]</activationId>
+  <activationId>wladza [0]</activationId>
+  <rule>wladza</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Liechtenstein [6, 1]</activationId>
+  <rule>Liechtenstein</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Znamy Odpowiedz [7]</activationId>
   <rule>Znamy Odpowiedz</rule>
-  <declarations>$panstwo=Islandia(4); $fakt=pl.put.poznan.Fakt@b2c3415(4)</declarations>
+  <declarations>$panstwo=Liechtenstein(7); $fakt=pl.put.poznan.Fakt@7f1f1c77(7)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>7</factId>
+  <objectToString>pl.put.poznan.Fakt@7f1f1c77</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Liechtenstein [6, 1]</activationId>
+  <rule>Liechtenstein</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Znamy Odpowiedz [7]</activationId>
+  <rule>Znamy Odpowiedz</rule>
+  <declarations>$panstwo=Liechtenstein(7); $fakt=pl.put.poznan.Fakt@7f1f1c77(7)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>7</factId>
+  <objectToString>pl.put.poznan.Fakt@7f1f1c77</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Znamy Odpowiedz [-1]</activationId>
+  <rule>Znamy Odpowiedz</rule>
+  <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 </object-stream>

@@ -91,7 +91,7 @@ end
 rule "morze_w"
 	when
 		Fakt(klucz=="ma_morze", prawda)
-		Fakt(klucz=="polozenie", tekst=="Wschod")
+		Fakt(klucz=="polozenie", tekst=="Zachod")
 	then
 		insert(Pytanie.zadaj("morze_w"));
 end
@@ -99,7 +99,7 @@ end
 rule "morze_e"
 	when
 		Fakt(klucz=="ma_morze", prawda)
-		Fakt(klucz=="polozenie", tekst=="Zachod")
+		Fakt(klucz=="polozenie", tekst=="Wschod")
 	then
 		insert(Pytanie.zadaj("morze_e"));
 end
