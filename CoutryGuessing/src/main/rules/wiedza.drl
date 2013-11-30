@@ -45,10 +45,14 @@ rule "Austria"
 	no-loop
 	salience 10000
 	when
-		Fakt(klucz=="polozenie", tekst=="Zachod")
-		Fakt(klucz=="euro", prawda)
+		(or
+			(and
+				Fakt(klucz=="polozenie", tekst=="Zachod")
+				Fakt(klucz=="euro", prawda)
+			)
 		
-		Fakt(klucz=="piwo", tekst in ("Stiegl", "Zipfer"))
+			Fakt(klucz=="piwo", tekst in ("Stiegl", "Zipfer"))
+		)
 	then
 		insert(new Fakt("panstwo", "Austria"));
 end
@@ -57,10 +61,14 @@ rule "Belgia"
 	no-loop
 	salience 10000
 	when
-		Fakt(klucz=="polozenie", tekst=="Zachod")
-		Fakt(klucz=="wladza", tekst=="Monarcha")
-		Fakt(klucz=="euro", prawda)
-		Fakt(klucz=="piwo", tekst=="Duvel")
+		(or
+			(and
+				Fakt(klucz=="polozenie", tekst=="Zachod")
+				Fakt(klucz=="wladza", tekst=="Monarcha")
+				Fakt(klucz=="euro", prawda)
+			)
+			Fakt(klucz=="piwo", tekst=="Duvel")
+		)
 	then
 		insert(new Fakt("panstwo", "Belgia"));
 end
@@ -145,9 +153,14 @@ rule "Dania"
 	no-loop
 	salience 10000
 	when
-		Fakt(klucz=="polozenie", tekst=="Zachod")
-		Fakt(klucz=="wladza", tekst=="Monarcha")
-		Fakt(klucz=="piwo", tekst=="Tuborg")
+		(or
+			(and
+				Fakt(klucz=="polozenie", tekst=="Zachod")
+				Fakt(klucz=="wladza", tekst=="Monarcha")
+			)
+			Fakt(klucz=="piwo", tekst=="Tuborg")
+		)
+
 	then
 		insert(new Fakt("panstwo", "Dania"));
 end
@@ -178,10 +191,14 @@ rule "Francja"
 	no-loop
 	salience 10000
 	when
-		Fakt(klucz=="polozenie", tekst=="Zachod")
-		Fakt(klucz=="euro", prawda)
-		Fakt(klucz=="samochody", prawda)
-		Fakt(klucz=="marka_samochodu", tekst in ("Citroen", "Peugeot"))
+		(or
+			(and
+				Fakt(klucz=="polozenie", tekst=="Zachod")
+				Fakt(klucz=="euro", prawda)
+				Fakt(klucz=="samochody", prawda)
+			)
+			Fakt(klucz=="marka_samochodu", tekst in ("Citroen", "Peugeot", "Renault"))
+		)
 	then
 		insert(new Fakt("panstwo", "Francja"));
 end
@@ -202,7 +219,15 @@ rule "Hiszpania"
 	no-loop
 	salience 10000
 	when
-		Fakt(klucz=="marka_samochodu", tekst == "Seat")
+		(or
+			(and
+				Fakt(klucz=="polozenie", tekst=="Zachod")
+				Fakt(klucz=="wladza", tekst=="Monarcha")
+				Fakt(klucz=="euro", prawda)
+				Fakt(klucz=="samochody", prawda)
+			)
+			Fakt(klucz=="marka_samochodu", tekst == "Seat")
+		)
 	then
 		insert(new Fakt("panstwo", "Hiszpania"));
 end
@@ -211,10 +236,14 @@ rule "Holandia"
 	no-loop
 	salience 10000
 	when
-		Fakt(klucz=="polozenie", tekst=="Zachod")
-		Fakt(klucz=="wladza", tekst=="Monarcha")
-		Fakt(klucz=="euro", prawda)
-		Fakt(klucz=="piwo", tekst=="Grolsch")
+		(or
+			(and
+				Fakt(klucz=="polozenie", tekst=="Zachod")
+				Fakt(klucz=="wladza", tekst=="Monarcha")
+				Fakt(klucz=="euro", prawda)
+			)
+			Fakt(klucz=="piwo", tekst=="Grolsch")
+		)
 	then
 		insert(new Fakt("panstwo", "Holandia"));
 end
@@ -484,7 +513,7 @@ rule "Szwecja"
 				Fakt(klucz=="samochody", prawda)
 			)
 			Fakt(klucz=="szwecja", prawda)
-			Fakt(klucz=="piwo", tekst=="Nils Oscar")
+			Fakt(klucz=="piwo", tekst=="Nils")
 		)
 	then
 		insert(new Fakt("panstwo", "Szwecja"));

@@ -16,6 +16,7 @@ rule "start"
        
     then
         insert(Pytanie.zadaj("polozenie"));
+        insert("niejednoznacznie", true);
 
 end
 
@@ -23,6 +24,7 @@ rule "wyspiarski"
 	salience 100
 	when
 		Fakt(klucz=="polozenie", tekst != "Wschod")
+		Fakt(klucz=="niejednoznacznie", prawda)
 	then
 		Fakt o = Pytanie.zadaj("wyspiarski");
         insert(o);
@@ -32,12 +34,14 @@ end
 
 rule "wladza"
 	when
+		o : Fakt(klucz=="niejednoznacznie", prawda)
 	then
 		insert(Pytanie.zadaj("wladza"));
 end
 
 rule "euro"
 	when
+		o : Fakt(klucz=="niejednoznacznie", prawda)
 	then
 		insert(Pytanie.zadaj("euro"));
 end
@@ -45,13 +49,16 @@ end
 rule "samochody"
 	salience 100
 	when
+		o : Fakt(klucz=="niejednoznacznie", prawda)
 	then
 		insert(Pytanie.zadaj("samochody"));
+
 end
 
 rule "czy_szwecja"
 	when
 		Fakt(klucz=="polozenie", tekst == "Polnoc")
+		o : Fakt(klucz=="niejednoznacznie", prawda)
 	then
 		insert(Pytanie.zadaj("szwecja"));
 end
@@ -59,6 +66,7 @@ end
 rule "czy_wodka"
 	when
 		Fakt(klucz=="polozenie", tekst == "Polnoc")
+		o : Fakt(klucz=="niejednoznacznie", prawda)
 		Fakt(klucz=="szwecja", !prawda)
 	then
 		insert(Pytanie.zadaj("czy_wodka"));
@@ -68,14 +76,21 @@ rule "marka_samochodu_w"
 	when
 		Fakt(klucz=="polozenie", tekst == "Zachod")
 		Fakt(klucz=="samochody", prawda)
+		o : Fakt(klucz=="niejednoznacznie", prawda)
 	then
-		insert(Pytanie.zadaj("marka_samochodu_w"));
+		Fakt p = Pytanie.zadaj("marka_samochodu_w");
+		insert(p);
+		if (p != null) {
+			o.setPrawda(false);
+			update(o);
+		}
 end
 
 rule "ma_morze"
 	when
 		Fakt(klucz=="wyspiarski", !prawda) or
 		Fakt(klucz=="polozenie", tekst == "Wschod")
+		o : Fakt(klucz=="niejednoznacznie", prawda)
 	then
 		insert(Pytanie.zadaj("ma_morze"));
 end
@@ -115,34 +130,59 @@ end
 rule "piwo_n"
 	when
 		Fakt(klucz=="polozenie", tekst=="Polnoc")
+		o : Fakt(klucz=="niejednoznacznie", prawda)
 	then
-		insert(Pytanie.zadaj("piwo_n"));
+		Fakt p = Pytanie.zadaj("piwo_n");
+		insert(p);
+		if (p != null) {
+			o.setPrawda(false);
+			update(o);
+		}
 end
 
 rule "piwo_s"
 	when
 		Fakt(klucz=="polozenie", tekst=="Poludnie")
+		o : Fakt(klucz=="niejednoznacznie", prawda)
 	then
-		insert(Pytanie.zadaj("piwo_s"));
+		Fakt p = Pytanie.zadaj("piwo_s");
+		insert(p);
+	 	if (p != null) {
+			o.setPrawda(false);
+			update(o);
+		}
 end
 
 rule "piwo_e"
 	when
 		Fakt(klucz=="polozenie", tekst=="Wschod")
+		o : Fakt(klucz=="niejednoznacznie", prawda)
 	then
-		insert(Pytanie.zadaj("piwo_e"));
+		Fakt p = Pytanie.zadaj("piwo_e");
+		insert(p);
+		if (p != null) {
+			o.setPrawda(false);
+			update(o);
+		}
 end
 
 rule "piwo_w"
 	when
 		Fakt(klucz=="polozenie", tekst=="Zachod")
+		o : Fakt(klucz=="niejednoznacznie", prawda)
 	then
-		insert(Pytanie.zadaj("piwo_w"));
+		Fakt p = Pytanie.zadaj("piwo_w");
+		insert(p);
+		if (p != null) {
+			o.setPrawda(false);
+			update(o);
+		}
 end
 
 rule "balkanskie"
 	when
 		Fakt(klucz=="polozenie", tekst=="Poludnie")
+		o : Fakt(klucz=="niejednoznacznie", prawda)
 	then
 		insert(Pytanie.zadaj("balkanskie"));
 end
@@ -151,23 +191,38 @@ rule "czy_grecja"
 	salience 100
 	when
 		Fakt(klucz=="balkanskie", prawda)
+		o : Fakt(klucz=="niejednoznacznie", prawda)
 	then
-		insert(Pytanie.zadaj("grecja"));
+		Fakt p = Pytanie.zadaj("grecja");
+		insert(p);
+		if (p.getPrawda()){
+			o.setPrawda(false);
+			update(o);
+		}
 end
 
 rule "czy_turcja"
 	salience 99
 	when
 		Fakt(klucz=="balkanskie", prawda)
+		o : Fakt(klucz=="niejednoznacznie", prawda)
 	then
-		insert(Pytanie.zadaj("turcja"));
+		Fakt p = Pytanie.zadaj("turcja");
+		insert(p);
+		if (p.getPrawda()){
+			o.setPrawda(false);
+			update(o);
+		}
 end
 
 rule "stolica_balkany"
 	salience 10
 	when
 		Fakt(klucz=="balkanskie", prawda)
+		o : Fakt(klucz=="niejednoznacznie", prawda)
 	then
 		insert(Pytanie.zadaj("stolica_balkany"));
+		o.setPrawda(false);
+		update(o);
 end
 
