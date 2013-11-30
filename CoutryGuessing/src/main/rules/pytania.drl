@@ -16,7 +16,7 @@ rule "start"
        
     then
         insert(Pytanie.zadaj("polozenie"));
-        insert("niejednoznacznie", true);
+        insert(new Fakt("niejednoznacznie", true));
 
 end
 
