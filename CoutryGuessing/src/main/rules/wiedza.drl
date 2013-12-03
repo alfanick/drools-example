@@ -98,8 +98,11 @@ rule "Bosnia i Hercegowina"
 	when
 		(or
 			Fakt(klucz=="piwo", tekst=="Nektar")
-			//Fakt(klucz=="wladza", tekst=="Prezydent")
 			Fakt(klucz=="stolica", tekst=="Sarajewo")
+			(and
+				Fakt(klucz=="balkanskie", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
+			)
 		)
 	then
 		insert(new Fakt("panstwo", "Bosnia i Hercegowina"));
@@ -313,11 +316,26 @@ rule "Irlandia"
 	no-loop
 	salience 10000
 	when
-		Fakt(klucz=="polozenie", tekst=="Zachod")
-		Fakt(klucz=="wyspiarski", prawda)
-		Fakt(klucz=="wladza", tekst=="Prezydent")
-		Fakt(klucz=="euro", prawda)
-		Fakt(klucz=="morze", tekst=="Atlantyk")
+		(or
+			(and
+				Fakt(klucz=="polozenie", tekst=="Zachod")
+				Fakt(klucz=="wyspiarski", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
+			)
+			(and
+				Fakt(klucz=="polozenie", tekst=="Zachod")
+				Fakt(klucz=="wyspiarski", prawda)
+				Fakt(klucz=="euro", prawda)
+			)
+
+			//(and
+			//	Fakt(klucz=="polozenie", tekst=="Zachod")
+			//	Fakt(klucz=="wyspiarski", prawda)
+			//	Fakt(klucz=="wladza", tekst=="Prezydent")
+			//	Fakt(klucz=="euro", prawda)
+			//	Fakt(klucz=="morze", tekst=="Atlantyk")
+			//)
+		)
 	then
 		insert(new Fakt("panstwo", "Irlandia"));
 end
@@ -748,11 +766,14 @@ rule "Wielka Brytania"
 	salience 10000
 	when
 		(or
-			(and
-				Fakt(klucz=="polozenie", tekst=="Zachod")
-				Fakt(klucz=="wladza", tekst=="Monarcha")
+			(and	
 				Fakt(klucz=="wyspiarski", prawda)
 				Fakt(klucz=="samochody", prawda)
+			)
+			(and
+				Fakt(klucz=="polozenie", tekst=="Zachod")
+				Fakt(klucz=="wyspiarski", prawda)
+				Fakt(klucz=="wladza", tekst=="Monarcha")
 				Fakt(klucz=="morze", tekst in ("Polnocne", "Norweskie", "Atlantyk"))
 			)
 
