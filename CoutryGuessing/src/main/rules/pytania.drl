@@ -258,7 +258,10 @@ rule "graniczy_polska_w"
 		Fakt(klucz=="polozenie", tekst=="Zachod")
 		o : Fakt(klucz=="niejednoznacznie", prawda)
 	then
-		insert(Pytanie.zadaj("graniczy_polska"));
-		o.setPrawda(false);
-		update(o);
+		Fakt p = Pytanie.zadaj("graniczy_polska");
+		insert(p);
+		if (p.getPrawda() ) {
+			o.setPrawda(false);
+			update(o);
+		}
 end

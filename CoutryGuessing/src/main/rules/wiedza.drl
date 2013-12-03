@@ -98,7 +98,7 @@ rule "Bosnia i Hercegowina"
 	when
 		(or
 			Fakt(klucz=="piwo", tekst=="Nektar")
-			Fakt(klucz=="wladza", tekst=="Prezydent")
+			//Fakt(klucz=="wladza", tekst=="Prezydent")
 			Fakt(klucz=="stolica", tekst=="Sarajewo")
 		)
 	then
@@ -369,6 +369,7 @@ rule "Kosowo"
 			Fakt(klucz=="stolica", tekst=="Prisztina")
 			(and
 				Fakt(klucz=="balkanskie", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="euro", prawda)
 			)
 		)
@@ -433,9 +434,14 @@ end
 rule "Macedonia"
 	no-loop
 	salience 10000
-	when
-		Fakt(klucz=="stolica", tekst=="Skopje")
-		Fakt(klucz=="wladza", tekst=="Prezydent")
+	when	
+		(or
+			Fakt(klucz=="stolica", tekst=="Skopje")
+			(and
+				Fakt(klucz=="balkanskie", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
+			)
+		)
 	then
 		insert(new Fakt("panstwo", "Macedonia"));
 end
@@ -597,8 +603,10 @@ rule "Rumunia"
 	salience 10000
 	when
 		(or
-			Fakt(klucz=="polozenie", tekst=="Wschod")
-			Fakt(klucz=="wladza", tekst=="Prezydent")
+			(and
+				Fakt(klucz=="polozenie", tekst=="Wschod")
+				Fakt(klucz=="wladza", tekst=="Prezydent")
+			)
 			Fakt(klucz=="stolica", tekst=="Bukareszt")
 		)
 	then
