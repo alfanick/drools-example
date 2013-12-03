@@ -140,6 +140,7 @@ rule "Czarnogora"
 			Fakt(klucz=="stolica", tekst=="Podgorica")
 			(and
 				Fakt(klucz=="balkanskie", prawda)
+				Fakt(klucz=="euro", prawda) // <== TAK, Czarnogóra ma euro mimo, że nie jest w UE
 				Fakt(klucz=="morze", tekst=="Srodziemne")
 			)		
 		)
@@ -221,10 +222,12 @@ rule "Finlandia"
 			Fakt(klucz=="piwo", tekst=="Sahti")
 			(and
 				Fakt(klucz=="polozenie", tekst== "Polnoc")
+				Fakt(klucz=="euro", prawda)
 				Fakt(klucz=="morze", tekst=="Baltyk")
 			)
 			(and
 				Fakt(klucz=="polozenie", tekst== "Polnoc")
+				Fakt(klucz=="euro", prawda)
 				Fakt(klucz=="morze", tekst=="Barentsa")
 			)
 		)
@@ -264,6 +267,7 @@ rule "Grecja"
 			Fakt(klucz=="piwo", tekst=="Zorbas")
 			(and
 				Fakt(klucz=="balkanskie", prawda)
+				Fakt(klucz=="euro", prawda)
 				Fakt(klucz=="morze", tekst=="Srodziemne")
 			)
 		)
@@ -345,7 +349,13 @@ rule "Kosowo"
 	no-loop
 	salience 10000
 	when
-		Fakt(klucz=="stolica", tekst=="Prisztina")
+		(or
+			Fakt(klucz=="stolica", tekst=="Prisztina")
+			(and
+				Fakt(klucz=="balkanskie", prawda)
+				Fakt(klucz=="euro", prawda)
+			)
+		)
 	then
 		insert(new Fakt("panstwo", "Kosowo"));
 end
@@ -613,10 +623,12 @@ rule "Slowenia"
 			Fakt(klucz=="stolica", tekst=="Lublana")
 			(and
 				Fakt(klucz=="polozenie", tekst=="Poludnie")
+				Fakt(klucz=="euro", prawda)
 				Fakt(klucz=="morze", tekst=="Srodziemne")
 			)
 			(and
 				Fakt(klucz=="balkanskie", prawda)
+				Fakt(klucz=="euro", prawda)
 				Fakt(klucz=="morze", tekst=="Srodziemne")
 			)
 		)
@@ -687,7 +699,13 @@ rule "Watykan"
 	no-loop
 	salience 10000
 	when
-		Fakt(klucz=="wladza", tekst=="Papiez")
+		(or
+			(and
+				Fakt(klucz=="polozenie", tekst=="Poludnie")
+				Fakt(klucz=="euro", prawda)
+			)
+			Fakt(klucz=="wladza", tekst=="Papiez")
+		)
 	then
 		insert(new Fakt("panstwo", "Watykan"));
 end
@@ -746,6 +764,7 @@ rule "Wlochy"
 			)
 			(and
 				Fakt(klucz=="morze", tekst=="Srodziemne")
+				Fakt(klucz=="euro", prawda)
 				Fakt(klucz=="polozenie", tekst=="Poludnie")
 			)
 			Fakt(klucz=="piwo", tekst=="Peroni")
