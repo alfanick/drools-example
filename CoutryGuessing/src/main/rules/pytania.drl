@@ -15,8 +15,10 @@ rule "start"
 	when
        
     then
-        insert(Pytanie.zadaj("polozenie"));
-        insert(new Fakt("niejednoznacznie", true));
+
+	insert(new Fakt("niejednoznacznie", true));
+	insert(Pytanie.zadaj("polozenie"));
+        
 
 end
 
@@ -27,9 +29,9 @@ rule "wyspiarski"
 		Fakt(klucz=="niejednoznacznie", prawda)
 	then
 		Fakt o = Pytanie.zadaj("wyspiarski");
-        insert(o);
-        if (o.getPrawda())
-        	insert(new Fakt("ma_morze", true));
+		insert(o);
+		if (o.getPrawda())
+			insert(new Fakt("ma_morze", true));
 end
 
 rule "wladza"
@@ -37,11 +39,11 @@ rule "wladza"
 		o : Fakt(klucz=="niejednoznacznie", prawda)
 	then
 		Fakt p = Pytanie.zadaj("wladza");
+		insert(p);
 		if (p.getTekst().equals("Kapitan") || p.getTekst().equals("Papież")){
 			o.setPrawda(false);
 			update(o);
 		}
-		insert(p);
 end
 
 rule "euro"

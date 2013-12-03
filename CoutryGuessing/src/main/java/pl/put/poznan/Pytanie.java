@@ -71,7 +71,7 @@ public class Pytanie {
     if (pytanie != null) {
       Object odpowiedz;
 
-      do {
+      //do {
         odpowiedz = (Object)JOptionPane.showInputDialog(null,
             pytanie.getTresc(),
             id,
@@ -79,7 +79,7 @@ public class Pytanie {
             null,
             pytanie.getOdpowiedzi().values().toArray(),
             pytanie.getOdpowiedzi().get(0));
-      } while (odpowiedz == null);
+      //} while (odpowiedz == null);
 
       // zalozmy ze to liczba
       if (odpowiedz instanceof Double) {
