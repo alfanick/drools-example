@@ -34,16 +34,25 @@ rule "wyspiarski"
 			insert(new Fakt("ma_morze", true));
 end
 
-rule "wladza"
+rule "wladza_s"
 	when
 		o : Fakt(klucz=="niejednoznacznie", prawda)
+    Fakt(klucz=="polozenie", tekst == "Poludnie")
 	then
-		Fakt p = Pytanie.zadaj("wladza");
+		Fakt p = Pytanie.zadaj("wladza_s");
 		insert(p);
 		if (p.getTekst().equals("Kapitan") || p.getTekst().equals("Papież")){
 			o.setPrawda(false);
 			update(o);
 		}
+end
+
+rule "wladza"
+	when
+		o : Fakt(klucz=="niejednoznacznie", prawda)
+    Fakt(klucz=="polozenie", tekst != "Poludnie")
+	then
+		insert(Pytanie.zadaj("wladza"));
 end
 
 rule "euro"

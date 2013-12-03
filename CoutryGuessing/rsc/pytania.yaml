@@ -62,9 +62,14 @@ wladza:
   odpowiedzi:
     Prezydent: Prezydent
     Monarcha: Monarcha
-    Papiez: Papiez
-    Kapitan: Kapitan regent
-
+wladza_s:
+  pytanie: Kto jest przywódcą tego kraju?
+  wartosc: wladza
+  odpowiedzi:
+    Prezydent: Prezydent
+    Monaracha: Monarcha
+    Papiez: Papież
+    Kapian: Kapitan regent
 samochody:
   pytanie: Czy kraj posiada własną markę samochodową?
   wartosc: samochody
