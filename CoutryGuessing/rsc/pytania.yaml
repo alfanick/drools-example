@@ -63,6 +63,7 @@ wladza:
     Prezydent: Prezydent
     Monarcha: Monarcha
     Papiez: Papiez
+    Kapitan: Kapitan regent
 samochody:
   pytanie: Czy kraj posiada własną markę samochodową?
   wartosc: samochody

@@ -36,7 +36,12 @@ rule "wladza"
 	when
 		o : Fakt(klucz=="niejednoznacznie", prawda)
 	then
-		insert(Pytanie.zadaj("wladza"));
+		Fakt p = Pytanie.zadaj("wladza");
+		if (p.getTekst().equals("Kapitan") || p.getTekst().equals("Papież")){
+			o.setPrawda(false);
+			update(o);
+		}
+		insert(p);
 end
 
 rule "euro"

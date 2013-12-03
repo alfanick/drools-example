@@ -28,6 +28,7 @@ rule "Albania"
 			Fakt(klucz=="stolica", tekst=="Tirana")
 			(and
 				Fakt(klucz=="balkanskie", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="morze", tekst=="Srodziemne")
 			)
 		)
@@ -53,6 +54,7 @@ rule "Austria"
 		(or
 			(and
 				Fakt(klucz=="polozenie", tekst=="Zachod")
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="euro", prawda)
 			)
 		
@@ -84,6 +86,7 @@ rule "Bialorus"
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Wschod")
+		Fakt(klucz=="wladza", tekst=="Prezydent")
 		Fakt(klucz=="graniczy_polska", prawda)
 	then
 		insert(new Fakt("panstwo", "Bialorus"));
@@ -95,6 +98,7 @@ rule "Bosnia i Hercegowina"
 	when
 		(or
 			Fakt(klucz=="piwo", tekst=="Nektar")
+			Fakt(klucz=="wladza", tekst=="Prezydent")
 			Fakt(klucz=="stolica", tekst=="Sarajewo")
 		)
 	then
@@ -110,6 +114,7 @@ rule "Bulgaria"
 			Fakt(klucz=="stolica", tekst=="Sofia")
 			(and
 				Fakt(klucz=="balkanskie", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="morze", tekst=="Czarne")
 			)
 		)
@@ -125,6 +130,7 @@ rule "Chorwacja"
 			Fakt(klucz=="stolica", tekst=="Zagrzeb")
 			(and
 				Fakt(klucz=="balkanskie", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="morze", tekst=="Srodziemne")
 			)
 		)
@@ -140,6 +146,7 @@ rule "Czarnogora"
 			Fakt(klucz=="stolica", tekst=="Podgorica")
 			(and
 				Fakt(klucz=="balkanskie", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="euro", prawda) // <== TAK, Czarnogóra ma euro mimo, że nie jest w UE
 				Fakt(klucz=="morze", tekst=="Srodziemne")
 			)		
@@ -155,6 +162,7 @@ rule "Czechy"
 		(or
 			(and
 				Fakt(klucz=="polozenie", tekst=="Wschod")
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="graniczy_polska", prawda)
 				Fakt(klucz=="samochody", prawda)
 			)
@@ -172,6 +180,8 @@ rule "Cypr"
 		(or
 			(and
 				Fakt(klucz=="polozenie", tekst=="Poludnie")
+				Fakt(klucz=="wladza", tekst=="Prezydent")
+				Fakt(klucz=="euro", prawda)
 				Fakt(klucz=="wyspiarski", prawda)
 			)
 			Fakt(klucz=="piwo", tekst=="Keo")
@@ -208,6 +218,7 @@ rule "Estonia"
 	when
 		Fakt(klucz=="polozenie", tekst=="Wschod")
 		Fakt(klucz=="euro", prawda)
+		Fakt(klucz=="wladza", tekst=="Prezydent")
 		Fakt(klucz=="morze", tekst=="Baltyk")
 	then
 		insert(new Fakt("panstwo", "Estonia"));
@@ -223,11 +234,13 @@ rule "Finlandia"
 			(and
 				Fakt(klucz=="polozenie", tekst== "Polnoc")
 				Fakt(klucz=="euro", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="morze", tekst=="Baltyk")
 			)
 			(and
 				Fakt(klucz=="polozenie", tekst== "Polnoc")
 				Fakt(klucz=="euro", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="morze", tekst=="Barentsa")
 			)
 		)
@@ -243,12 +256,14 @@ rule "Francja"
 			(and
 				Fakt(klucz=="polozenie", tekst=="Zachod")
 				Fakt(klucz=="euro", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="samochody", prawda)
 				Fakt(klucz=="morze", tekst=="Atlantyk")
 			)
 			(and
 				Fakt(klucz=="polozenie", tekst=="Zachod")
 				Fakt(klucz=="euro", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="samochody", prawda)
 				Fakt(klucz=="morze", tekst=="Srodziemne")
 			)
@@ -268,6 +283,7 @@ rule "Grecja"
 			(and
 				Fakt(klucz=="balkanskie", prawda)
 				Fakt(klucz=="euro", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="morze", tekst=="Srodziemne")
 			)
 		)
@@ -323,7 +339,7 @@ rule "Irlandia"
 	when
 		Fakt(klucz=="polozenie", tekst=="Zachod")
 		Fakt(klucz=="wyspiarski", prawda)
-		Fakt(klucz=="wladza", tekst=="Monarcha")
+		Fakt(klucz=="wladza", tekst=="Prezydent")
 		Fakt(klucz=="euro", prawda)
 		Fakt(klucz=="morze", tekst=="Atlantyk")
 	then
@@ -364,6 +380,7 @@ rule "Kazachstan"
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Wschod")
+		Fakt(klucz=="wladza", tekst=="Prezydent")
 		Fakt(klucz=="morze", tekst=="Kaspijskie")
 	then
 		insert(new Fakt("panstwo", "Kazachstan"));
@@ -385,6 +402,7 @@ rule "Litwa"
 	when
 		Fakt(klucz=="polozenie", tekst=="Wschod")
 		Fakt(klucz=="graniczy_polska", prawda)
+		Fakt(klucz=="wladza", tekst=="Prezydent")
 		Fakt(klucz=="morze", tekst=="Baltyk")
 	then
 		insert(new Fakt("panstwo", "Litwa"));
@@ -406,6 +424,7 @@ rule "Lotwa"
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Wschod")
+		Fakt(klucz=="wladza", tekst=="Prezydent")
 		Fakt(klucz=="morze", tekst=="Baltyk")
 	then
 		insert(new Fakt("panstwo", "Lotwa"));
@@ -416,6 +435,7 @@ rule "Macedonia"
 	salience 10000
 	when
 		Fakt(klucz=="stolica", tekst=="Skopje")
+		Fakt(klucz=="wladza", tekst=="Prezydent")
 	then
 		insert(new Fakt("panstwo", "Macedonia"));
 end
@@ -426,6 +446,7 @@ rule "Malta"
 	when
 		Fakt(klucz=="polozenie", tekst=="Poludnie")
 		Fakt(klucz=="euro", prawda)
+		Fakt(klucz=="wladza", tekst=="Prezydent")
 		Fakt(klucz=="wyspiarski", prawda)
 	then
 		insert(new Fakt("panstwo", "Malta"));
@@ -436,6 +457,7 @@ rule "Moldawia"
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Wschod")
+		Fakt(klucz=="wladza", tekst=="Prezydent")
 	then
 		insert(new Fakt("panstwo", "Moldawia"));
 end
@@ -471,6 +493,7 @@ rule "Niemcy"
 				Fakt(klucz=="polozenie", tekst=="Zachod")
 				Fakt(klucz=="samochody", prawda)
 				Fakt(klucz=="euro", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="morze", tekst=="Polnocne")
 			)
 			
@@ -510,6 +533,7 @@ rule "Polska"
 		(or
 			(and
 				Fakt(klucz=="polozenie", tekst=="Wschod")
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="morze", tekst=="Baltyk")
 			)
 			Fakt(klucz=="piwo", tekst=="Tyskie")
@@ -524,6 +548,7 @@ rule "Portugalia"
 	when
 		Fakt(klucz=="polozenie", tekst=="Zachod")
 		Fakt(klucz=="euro", prawda)
+		Fakt(klucz=="wladza", tekst=="Prezydent")
 		Fakt(klucz=="morze", tekst=="Atlantyk")
 	then
 		insert(new Fakt("panstwo", "Portugalia"));
@@ -545,12 +570,14 @@ rule "Rosja"
 				Fakt(klucz=="polozenie", tekst=="Wschod")
 				Fakt(klucz=="graniczy_polska", prawda)
 				Fakt(klucz=="samochody", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="morze", tekst=="Czarne")
 			)
 			(and
 				Fakt(klucz=="polozenie", tekst=="Wschod")
 				Fakt(klucz=="graniczy_polska", prawda)
 				Fakt(klucz=="samochody", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="morze", tekst=="Baltyk")
 			)
 			(and
@@ -570,6 +597,7 @@ rule "Rumunia"
 	when
 		(or
 			Fakt(klucz=="polozenie", tekst=="Wschod")
+			Fakt(klucz=="wladza", tekst=="Prezydent")
 			Fakt(klucz=="stolica", tekst=="Bukareszt")
 		)
 	then
@@ -580,8 +608,13 @@ rule "San Marino"
 	no-loop
 	salience 10000
 	when
-		Fakt(klucz=="polozenie", tekst=="Poludnie")
-		Fakt(klucz=="euro", prawda)
+		(or
+			(and
+				Fakt(klucz=="polozenie", tekst=="Poludnie")
+				Fakt(klucz=="euro", prawda)
+			)
+			Fakt(klucz=="wladza", tekst=="Kapitan")
+		)
 	then
 		insert(new Fakt("panstwo", "San Marino"));
 end
@@ -591,6 +624,10 @@ rule "Serbia"
 	salience 10000
 	when
 		(or
+			(and
+				Fakt(klucz=="balkanskie", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
+			)
 			Fakt(klucz=="piwo", tekst=="Jelen")
 			Fakt(klucz=="stolica", tekst=="Belgrad")
 		)
@@ -607,6 +644,7 @@ rule "Slowacja"
 				Fakt(klucz=="polozenie", tekst=="Wschod")
 				Fakt(klucz=="euro", prawda)
 				Fakt(klucz=="graniczy_polska", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 			)
 			Fakt(klucz=="piwo", tekst=="ZB")
 		)
@@ -624,11 +662,13 @@ rule "Slowenia"
 			(and
 				Fakt(klucz=="polozenie", tekst=="Poludnie")
 				Fakt(klucz=="euro", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="morze", tekst=="Srodziemne")
 			)
 			(and
 				Fakt(klucz=="balkanskie", prawda)
 				Fakt(klucz=="euro", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="morze", tekst=="Srodziemne")
 			)
 		)
@@ -641,6 +681,7 @@ rule "Szwajcaria"
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Zachod")
+		Fakt(klucz=="wladza", tekst=="Prezydent")
 	then
 		insert(new Fakt("panstwo", "Szwajcaria"));
 end
@@ -657,6 +698,7 @@ rule "Szwecja"
 			(and
 				Fakt(klucz=="polozenie", tekst=="Polnoc")
 				Fakt(klucz=="morze", tekst=="Baltyk")
+				Fakt(klucz=="wladza", tekst=="Monarcha")
 			)
 			Fakt(klucz=="szwecja", prawda)
 			Fakt(klucz=="piwo", tekst=="Nils")
@@ -673,10 +715,12 @@ rule "Turcja"
 			(and
 				Fakt(klucz=="polozenie", tekst=="Poludnie")
 				Fakt(klucz=="morze", tekst=="Czarne")
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 			)
 			(and
 				Fakt(klucz=="polozenie", tekst=="Poludnie")
 				Fakt(klucz=="morze", tekst=="Srodziemne")
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 			)
 			Fakt(klucz=="trucja", prawda)
 		)
@@ -690,6 +734,7 @@ rule "Ukraina"
 	when
 		Fakt(klucz=="polozenie", tekst=="Wschod")
 		Fakt(klucz=="graniczy_polska", prawda)
+		Fakt(klucz=="wladza", tekst=="Prezydent")
 		Fakt(klucz=="morze", tekst=="Czarne")
 	then
 		insert(new Fakt("panstwo", "Ukraina"));
@@ -715,6 +760,7 @@ rule "Wegry"
 	salience 10000
 	when
 		Fakt(klucz=="polozenie", tekst=="Wschod")
+		Fakt(klucz=="wladza", tekst=="Prezydent")
 	then
 		insert(new Fakt("panstwo", "Wegry"));
 end
@@ -765,6 +811,7 @@ rule "Wlochy"
 			(and
 				Fakt(klucz=="morze", tekst=="Srodziemne")
 				Fakt(klucz=="euro", prawda)
+				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="polozenie", tekst=="Poludnie")
 			)
 			Fakt(klucz=="piwo", tekst=="Peroni")
