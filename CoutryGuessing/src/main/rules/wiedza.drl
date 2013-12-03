@@ -198,12 +198,7 @@ rule "Dania"
 			(and
 				Fakt(klucz=="polozenie", tekst=="Zachod")
 				Fakt(klucz=="wladza", tekst=="Monarcha")
-				Fakt(klucz=="morze", tekst=="Baltyk")
-			)
-			(and
-				Fakt(klucz=="polozenie", tekst=="Zachod")
-				Fakt(klucz=="wladza", tekst=="Monarcha")
-				Fakt(klucz=="morze", tekst=="Polnocne")
+				Fakt(klucz=="morze", tekst in ("Baltyk", "Polnocne"))
 			)
 			Fakt(klucz=="piwo", tekst=="Tuborg")
 		)
@@ -235,13 +230,7 @@ rule "Finlandia"
 				Fakt(klucz=="polozenie", tekst== "Polnoc")
 				Fakt(klucz=="euro", prawda)
 				Fakt(klucz=="wladza", tekst=="Prezydent")
-				Fakt(klucz=="morze", tekst=="Baltyk")
-			)
-			(and
-				Fakt(klucz=="polozenie", tekst== "Polnoc")
-				Fakt(klucz=="euro", prawda)
-				Fakt(klucz=="wladza", tekst=="Prezydent")
-				Fakt(klucz=="morze", tekst=="Barentsa")
+				Fakt(klucz=="morze", tekst in ("Baltyk", "Barentsa"))
 			)
 		)
 	then
@@ -258,15 +247,9 @@ rule "Francja"
 				Fakt(klucz=="euro", prawda)
 				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="samochody", prawda)
-				Fakt(klucz=="morze", tekst=="Atlantyk")
+				Fakt(klucz=="morze", tekst in ("Atlantyk", "Srodziemne"))
 			)
-			(and
-				Fakt(klucz=="polozenie", tekst=="Zachod")
-				Fakt(klucz=="euro", prawda)
-				Fakt(klucz=="wladza", tekst=="Prezydent")
-				Fakt(klucz=="samochody", prawda)
-				Fakt(klucz=="morze", tekst=="Srodziemne")
-			)
+
 			Fakt(klucz=="marka_samochodu", tekst in ("Citroen", "Peugeot", "Renault"))
 		)
 	then
@@ -300,14 +283,7 @@ rule "Hiszpania"
 				Fakt(klucz=="polozenie", tekst=="Zachod")
 				Fakt(klucz=="wladza", tekst=="Monarcha")
 				Fakt(klucz=="euro", prawda)
-				Fakt(klucz=="morze", tekst=="Srodziemne")
-				Fakt(klucz=="samochody", prawda)
-			)
-			(and
-				Fakt(klucz=="polozenie", tekst=="Zachod")
-				Fakt(klucz=="wladza", tekst=="Monarcha")
-				Fakt(klucz=="euro", prawda)
-				Fakt(klucz=="morze", tekst=="Atlantyk")
+				Fakt(klucz=="morze", tekst in ("Srodziemne", "Atlantyk"))
 				Fakt(klucz=="samochody", prawda)
 			)
 			Fakt(klucz=="marka_samochodu", tekst == "Seat")
@@ -492,7 +468,13 @@ rule "Niemcy"
 			(and
 				Fakt(klucz=="polozenie", tekst=="Zachod")
 				Fakt(klucz=="samochody", prawda)
-				Fakt(klucz=="euro", prawda)
+				//Fakt(klucz=="euro", prawda)
+				Fakt(klucz=="morze", tekst=="Baltyk")
+			)
+			(and
+				Fakt(klucz=="polozenie", tekst=="Zachod")
+				Fakt(klucz=="wladza", tekst=="Prezydent")
+				//Fakt(klucz=="euro", prawda)
 				Fakt(klucz=="morze", tekst=="Baltyk")
 			)
 			(and
@@ -518,14 +500,10 @@ rule "Norwegia"
 		(or
 			(and
 				Fakt(klucz=="polozenie", tekst=="Polnoc")
-				Fakt(klucz=="morze", tekst=="Norweskie")
+				Fakt(klucz=="morze", tekst in ("Norweskie", "Barentsa"))
 				Fakt(klucz=="wladza", tekst=="Monarcha")
 			)
-			(and
-				Fakt(klucz=="polozenie", tekst=="Polnoc")
-				Fakt(klucz=="morze", tekst=="Barentsa")
-				Fakt(klucz=="wladza", tekst=="Monarcha")
-			)
+
 			Fakt(klucz=="piwo", tekst=="Lysholmer")
 		)
 	then
@@ -569,27 +547,22 @@ rule "Rosja"
 			Fakt(klucz=="marka_samochodu", tekst=="Lada")
 			(and
 				Fakt(klucz=="polozenie", tekst=="Wschod")
-				Fakt(klucz=="graniczy_polska", prawda)
-				Fakt(klucz=="samochody", prawda)
 				Fakt(klucz=="morze", tekst=="Barentsa")
 			)
 			(and
 				Fakt(klucz=="polozenie", tekst=="Wschod")
 				Fakt(klucz=="graniczy_polska", prawda)
 				Fakt(klucz=="samochody", prawda)
-				Fakt(klucz=="wladza", tekst=="Prezydent")
-				Fakt(klucz=="morze", tekst=="Czarne")
+				//Fakt(klucz=="wladza", tekst=="Prezydent")
+				Fakt(klucz=="morze", tekst in ("Baltyk", "Czarne"))
 			)
 			(and
 				Fakt(klucz=="polozenie", tekst=="Wschod")
 				Fakt(klucz=="graniczy_polska", prawda)
-				Fakt(klucz=="samochody", prawda)
-				Fakt(klucz=="wladza", tekst=="Prezydent")
-				Fakt(klucz=="morze", tekst=="Baltyk")
+				Fakt(klucz=="morze", tekst=="Kaspijskie")
 			)
 			(and
 				Fakt(klucz=="polozenie", tekst=="Wschod")
-				Fakt(klucz=="graniczy_polska", prawda)
 				Fakt(klucz=="samochody", prawda)
 				Fakt(klucz=="morze", tekst=="Kaspijskie")
 			)
@@ -723,14 +696,10 @@ rule "Turcja"
 		(or
 			(and
 				Fakt(klucz=="polozenie", tekst=="Poludnie")
-				Fakt(klucz=="morze", tekst=="Czarne")
+				Fakt(klucz=="morze", tekst in ("Czarne", "Srodziemne"))
 				Fakt(klucz=="wladza", tekst=="Prezydent")
 			)
-			(and
-				Fakt(klucz=="polozenie", tekst=="Poludnie")
-				Fakt(klucz=="morze", tekst=="Srodziemne")
-				Fakt(klucz=="wladza", tekst=="Prezydent")
-			)
+			
 			Fakt(klucz=="trucja", prawda)
 		)
 	then
@@ -784,22 +753,9 @@ rule "Wielka Brytania"
 				Fakt(klucz=="wladza", tekst=="Monarcha")
 				Fakt(klucz=="wyspiarski", prawda)
 				Fakt(klucz=="samochody", prawda)
-				Fakt(klucz=="morze", tekst=="Polnocne")
+				Fakt(klucz=="morze", tekst in ("Polnocne", "Norweskie", "Atlantyk"))
 			)
-			(and
-				Fakt(klucz=="polozenie", tekst=="Zachod")
-				Fakt(klucz=="wladza", tekst=="Monarcha")
-				Fakt(klucz=="wyspiarski", prawda)
-				Fakt(klucz=="samochody", prawda)
-				Fakt(klucz=="morze", tekst=="Norweskie")
-			)
-			(and
-				Fakt(klucz=="polozenie", tekst=="Zachod")
-				Fakt(klucz=="wladza", tekst=="Monarcha")
-				Fakt(klucz=="wyspiarski", prawda)
-				Fakt(klucz=="samochody", prawda)
-				Fakt(klucz=="morze", tekst=="Atlantyk")
-			)
+
 			Fakt(klucz=="piwo", tekst=="Guinness")		
 			Fakt(klucz=="marka_samochodu", tekst in ("Vauxhall", "Bentley", "RR", "Aston", "Rover"))
 		)	
