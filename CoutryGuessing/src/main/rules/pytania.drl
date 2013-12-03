@@ -226,3 +226,10 @@ rule "stolica_balkany"
 		update(o);
 end
 
+rule "graniczy_polska"
+	when
+		Fakt(klucz=="polozenie", tekst=="Wschod")
+		o : Fakt(klucz=="niejednoznacznie", prawda)
+	then
+		insert(Pytanie.zadaj("graniczy_polska"));
+end

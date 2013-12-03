@@ -80,6 +80,7 @@ marka_samochodu_w:
     Porsche: Porsche
     Citroen: Citroen
     Peugeot: Peugeot
+    Renault: Renault
     Seat: Seat
     Opel: Opel
     Vauxhall: Vauxhall
@@ -184,3 +185,11 @@ stolica_balkany:
     Skopje: Skopje
     Prisztina: Prisztina
     Lublana: Lublana
+
+graniczy_polska:
+  pytanie: Czy to państwo graniczy z Polską?
+  wartosc: graniczy_polska
+  odpowiedzi:
+    T: Tak
+    N: Nie
+
