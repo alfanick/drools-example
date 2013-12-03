@@ -1,5 +1,7 @@
 package pl.put.poznan;
 
+import pl.put.poznan.KoniecException;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -65,13 +67,12 @@ public class Pytanie {
     return null;
 }
 
-  public static Fakt zadaj(String id) {
+  public static Fakt zadaj(String id) throws KoniecException {
     Pytanie pytanie = Pytanie.baza().get(id);
 
     if (pytanie != null) {
       Object odpowiedz;
 
-      //do {
         odpowiedz = (Object)JOptionPane.showInputDialog(null,
             pytanie.getTresc(),
             id,
@@ -79,8 +80,9 @@ public class Pytanie {
             null,
             pytanie.getOdpowiedzi().values().toArray(),
             pytanie.getOdpowiedzi().get(0));
-      //} while (odpowiedz == null);
 
+      if (odpowiedz == null)
+        throw new KoniecException();
       // zalozmy ze to liczba
       if (odpowiedz instanceof Double) {
         return new Fakt(pytanie.wartosc, ((Double)odpowiedz).floatValue());

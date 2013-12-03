@@ -1,5 +1,6 @@
 package com.sample;
 
+import javax.swing.JOptionPane;
 import java.awt.List;
 import java.lang.reflect.Array;
 
@@ -17,6 +18,8 @@ import org.drools.runtime.StatefulKnowledgeSession;
 import org.drools.runtime.StatelessKnowledgeSession;
 import java.net.URL;
 
+import pl.put.poznan.KoniecException;
+
 /**
  * This is a sample class to launch a rule.
  */
@@ -28,22 +31,20 @@ public class DroolsTest {
             KnowledgeBase kbase = readKnowledgeBase();
             StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession();
             KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession, "test");
+            JOptionPane.showMessageDialog(null, "Pomyśl o pewnym pańśtwie w Europie, program\nprzy pomocy dialogu postara się je odgadnać.", "CountryGuessing – A. Juskowiak, M. Rybarski @ PUT 2013", JOptionPane.INFORMATION_MESSAGE);
+
             // go !
-            System.out.println("pre");
             ksession.fireAllRules();
-            System.out.println("post");
             logger.close();
         } catch (Throwable t) {
-            t.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Koniec");
         }
     }
 
     private static KnowledgeBase readKnowledgeBase() throws Exception {
         KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
-        System.out.println("pre rf");
         kbuilder.add(ResourceFactory.newUrlResource(DroolsTest.class.getClassLoader().getResource("pytania.drl")), ResourceType.DRL);
         kbuilder.add(ResourceFactory.newUrlResource(DroolsTest.class.getClassLoader().getResource("wiedza.drl")), ResourceType.DRL);
-        System.out.println("post rf");
         KnowledgeBuilderErrors errors = kbuilder.getErrors();
         if (errors.size() > 0) {
             for (KnowledgeBuilderError error: errors) {
