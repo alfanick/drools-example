@@ -64,6 +64,7 @@ wladza:
     Monarcha: Monarcha
     Papiez: Papiez
     Kapitan: Kapitan regent
+
 samochody:
   pytanie: Czy kraj posiada własną markę samochodową?
   wartosc: samochody
@@ -71,7 +72,7 @@ samochody:
     T: Tak
     N: Nie
 marka_samochodu_w:
-  pytanie: Jaką markę?
+  pytanie: Jaką markę samochodu posiada ten kraj?
   wartosc: marka_samochodu
   odpowiedzi:
     BMW: BMW
@@ -90,7 +91,14 @@ marka_samochodu_w:
     Aston: Aston Martin
     Rover: Land Rover
     NW: Nie wiem
- 
+    
+marka_samochodu_e:
+  pytanie: Jaką markę samochodu posiada ten kraj?
+  wartosc: marka_samochodu
+  odpowiedzi:
+    Skoda: Skoda
+    Lada: Lada
+  
 piwo_n:
   pytanie: Jaką markę piwa produkuje to państwo?
   wartosc: piwo

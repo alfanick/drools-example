@@ -91,6 +91,20 @@ rule "marka_samochodu_w"
 		}
 end
 
+rule "marka_samochodu_e"
+	when
+		Fakt(klucz=="polozenie", tekst == "Wschod")
+		Fakt(klucz=="samochody", prawda)
+		o : Fakt(klucz=="niejednoznacznie", prawda)
+	then
+		Fakt p = Pytanie.zadaj("marka_samochodu_e");
+		insert(p);
+		if (p != null) {
+			o.setPrawda(false);
+			update(o);
+		}
+end
+
 rule "ma_morze"
 	when
 		Fakt(klucz=="wyspiarski", !prawda) or

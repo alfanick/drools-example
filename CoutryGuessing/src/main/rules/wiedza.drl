@@ -560,6 +560,7 @@ rule "Rosja"
 	when
 		(or
 			Fakt(klucz=="piwo", tekst=="Vodka")
+			Fakt(klucz=="marka_samochodu", tekst=="Lada")
 			(and
 				Fakt(klucz=="polozenie", tekst=="Wschod")
 				Fakt(klucz=="graniczy_polska", prawda)
