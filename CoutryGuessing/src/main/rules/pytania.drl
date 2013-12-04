@@ -23,7 +23,7 @@ rule "start"
 end
 
 rule "wyspiarski"
-	salience 100
+	//salience 100
 	when
 		Fakt(klucz=="polozenie", tekst != "Wschod")
 		Fakt(klucz=="niejednoznacznie", prawda)
@@ -63,7 +63,7 @@ rule "euro"
 end
 
 rule "samochody"
-	salience 100
+	//salience 100
 	when
 		o : Fakt(klucz=="niejednoznacznie", prawda)
 	then
@@ -218,7 +218,7 @@ rule "balkanskie"
 end
 
 rule "czy_grecja"
-	salience 100
+	//salience 100
 	when
 		Fakt(klucz=="balkanskie", prawda)
 		o : Fakt(klucz=="niejednoznacznie", prawda)
@@ -232,7 +232,7 @@ rule "czy_grecja"
 end
 
 rule "czy_turcja"
-	salience 99
+	//salience 99
 	when
 		Fakt(klucz=="balkanskie", prawda)
 		o : Fakt(klucz=="niejednoznacznie", prawda)
@@ -246,7 +246,7 @@ rule "czy_turcja"
 end
 
 rule "stolica_balkany"
-	salience 10
+	//salience 10
 	when
 		Fakt(klucz=="balkanskie", prawda)
 		o : Fakt(klucz=="niejednoznacznie", prawda)
