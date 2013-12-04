@@ -31,7 +31,7 @@ public class DroolsTest {
             KnowledgeBase kbase = readKnowledgeBase();
             StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession();
             KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession, "test");
-            JOptionPane.showMessageDialog(null, "Pomyśl o pewnym pańśtwie w Europie, program\nprzy pomocy dialogu postara się je odgadnać.", "CountryGuessing – A. Juskowiak, M. Rybarski @ PUT 2013", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Pomyśl o pewnym państwie w Europie, program\nprzy pomocy dialogu postara się je odgadnać.", "CountryGuessing – A. Juskowiak, M. Rybarski @ PUT 2013", JOptionPane.INFORMATION_MESSAGE);
 
             // go !
             ksession.fireAllRules();
