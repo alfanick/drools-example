@@ -27,6 +27,7 @@ rule "Albania"
 	when	(or
 			Fakt(klucz=="stolica", tekst=="Tirana")
 			(and
+				Fakt(klucz=="graniczy_polska", !prawda)
 				Fakt(klucz=="balkanskie", prawda)
 				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="morze", tekst=="Srodziemne")
@@ -48,6 +49,7 @@ rule "Andora"
 		Fakt(klucz=="ma_morze", !prawda)
 		Fakt(klucz=="wladza", tekst=="Monarcha")
 		Fakt(klucz=="euro", prawda)
+		
 	then
 		insert(new Fakt("panstwo", "Andora"));
 end
@@ -503,6 +505,7 @@ rule "Kazachstan"
 		Fakt(klucz=="polozenie", tekst=="Wschod")
 		Fakt(klucz=="wladza", tekst=="Prezydent")
 		Fakt(klucz=="morze", tekst=="Kaspijskie")
+		Fakt(klucz=="graniczy_polska", !prawda)
 		Fakt(klucz=="samochody", !prawda)
 		//Fakt(klucz=="euro", !prawda)
 	then
@@ -557,10 +560,10 @@ rule "Lotwa"
 	when
 		Fakt(klucz=="polozenie", tekst=="Wschod")
 		Fakt(klucz=="wladza", tekst=="Prezydent")
-		Fakt(klucz=="wyspiarski", !prawda)
 		Fakt(klucz=="morze", tekst=="Baltyk")
 		Fakt(klucz=="euro", !prawda)
 		Fakt(klucz=="samochody", !prawda)
+		//Fakt(klucz=="graniczy_polska", !prawda)
 	then
 		insert(new Fakt("panstwo", "Lotwa"));
 end
@@ -602,6 +605,7 @@ rule "Moldawia"
 		Fakt(klucz=="ma_morze", !prawda)
 		Fakt(klucz=="samochody", !prawda)
 		Fakt(klucz=="euro", !prawda)
+		Fakt(klucz=="graniczy_polska", !prawda)
 		Fakt(klucz=="wladza", tekst=="Prezydent")
 	then
 		insert(new Fakt("panstwo", "Moldawia"));
@@ -787,6 +791,7 @@ rule "Rumunia"
 				Fakt(klucz=="euro", !prawda)
 				Fakt(klucz=="wladza", tekst=="Prezydent")
 				Fakt(klucz=="samochody", !prawda)
+				Fakt(klucz=="graniczy_polska", !prawda)
 			)
 			Fakt(klucz=="stolica", tekst=="Bukareszt")
 		)
@@ -977,6 +982,7 @@ rule "Wegry"
 		Fakt(klucz=="ma_morze", !prawda)
 		Fakt(klucz=="euro", !prawda)
 		Fakt(klucz=="samochody", !prawda)
+		Fakt(klucz=="graniczy_polska", !prawda)
 		Fakt(klucz=="wladza", tekst=="Prezydent")
 	then
 		insert(new Fakt("panstwo", "Wegry"));
