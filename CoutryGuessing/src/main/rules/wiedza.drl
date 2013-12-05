@@ -21,6 +21,16 @@ rule "Znamy Odpowiedz"
 		}
 end
 
+rule "Nie ma panstwa"
+  salience -10000
+  when
+    not Fakt(klucz=="panstwo")
+  then
+    Fakt.oglos("Brak odpowiedzi - sprzeczne fakty");
+    drools.halt();
+end
+
+
 rule "Albania"
 	no-loop
 	salience 10000
